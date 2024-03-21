@@ -1,0 +1,20 @@
+# 1
+input_dir: Woa/
+# 2
+output_dir: Woa/SwiftGenGenerated/
+
+## XCAssets
+# 1
+xcassets:
+  # 2
+  inputs:
+    - AppInfo/Assets.xcassets
+    - AppInfo/Colors.xcassets
+  # 3
+  outputs:
+    # 4
+    templateName: swift5
+    # 5
+    output: GeneratedAssets.swift
+
+

@@ -7,11 +7,13 @@ target 'Woa' do
 
   # Pods for Woa
   pod 'SwiftLint'
-  pod 'SnapKit'
-  pod 'Moya'
+  pod 'SnapKit', '~> 5.0.0'
+  pod 'Moya', '~> 15.0'
 
   pod 'FirebaseAuth'
   pod 'FirebaseStorage'
   pod 'FirebaseFirestore'
+
+  pod 'SwiftGen'
 
 end
