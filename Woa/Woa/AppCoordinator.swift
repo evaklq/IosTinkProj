@@ -8,7 +8,6 @@
 import UIKit
 
 class AppCoordinator: BaseCoordinator {
-
     private var router: Router
     private let authModel: AuthModel
 
@@ -25,7 +24,10 @@ class AppCoordinator: BaseCoordinator {
             runTabBarFlow()
         }
     }
+}
 
+// MARK: - Configure flows actions
+extension AppCoordinator {
     private func runAuthFlow() {
         let authFlowCoordinator = coordinatorFactory.createAuthCoordinator(router: router)
         addDependency(authFlowCoordinator)

@@ -14,7 +14,8 @@ protocol SignUpViewDelegate: AnyObject {
 }
 
 class SignUpView: BaseView {
-    // MARK: - Declaration Objects
+    // MARK: - Subviews
+    weak var delegate: SignUpViewDelegate?
     private lazy var backImage: UIImageView = UIImageView(image: Asset.Assets.authDecor.image.withTintColor(Asset.Colors.backDecor.color))
     private lazy var nickTextField = createDefaultTextField(Strings.nick)
     private lazy var nickErrorsLabel = createErrorLabel()
@@ -31,12 +32,11 @@ class SignUpView: BaseView {
     private var regAction = UIAction { _ in }
     private var alreadyRegAction = UIAction { _ in }
 
-    weak var delegate: SignUpViewDelegate?
-
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureActions()
+        configureRegAction()
+        configureAlreadyRegAction()
         configureUI()
     }
     required init?(coder: NSCoder) {
@@ -46,26 +46,21 @@ class SignUpView: BaseView {
 
 // MARK: - Configure Actions
 extension SignUpView {
-    private func configureActions() {
-        regAction = createRegAction()
-        alreadyRegAction = createAlreadyRegAction()
-    }
-
-    private func createRegAction() -> UIAction {
+    private func configureRegAction() {
         let action = UIAction { [weak self] _ in
             guard let self else { return }
             let age = Int(self.ageTextField.text ?? "")
             self.delegate?.didPressReg(self.nickTextField.text, self.emailTextField.text, age, self.passTextField.text)
         }
-        return action
+        regAction = action
     }
 
-    private func createAlreadyRegAction() -> UIAction {
+    private func configureAlreadyRegAction() {
         let action = UIAction { [weak self] _ in
             guard let self else { return }
             self.delegate?.didPressAlreadyReg(self.nickTextField.text, self.passTextField.text)
         }
-        return action
+        alreadyRegAction = action
     }
 }
 

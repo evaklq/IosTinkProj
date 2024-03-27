@@ -19,6 +19,7 @@ class AuthCoordinator: BaseCoordinator {
     }
 }
 
+// MARK: - Configure flows actions
 extension AuthCoordinator {
     private func showSignUpController() {
         let signUpViewModel = SignUpViewModel()
