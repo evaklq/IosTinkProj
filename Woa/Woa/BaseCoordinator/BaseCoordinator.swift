@@ -9,7 +9,7 @@ import UIKit
 
 class BaseCoordinator: CoordinatorProtocol {
     var flowCompletionHandler: CompletionHandler?
-    var childCoordinators: [CoordinatorProtocol] = []
+    var childCoordinators: [CoordinatorProtocol]
     var coordinatorFactory: CoordinatorFactoryProtocol
     init() {
         childCoordinators = []

@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  Woa
+
+  Created by Mac on 2024-03-22.
+  
+*/
+
+// MARK: - Auth Screens
+"nick" = "Nick";
+"pass" = "Password";
+"email" = "Email";
+"age" = "Age";
+
+"authButton" = "Start your trip";
+"alreadyRegButton" = "Already regregistered?";
+

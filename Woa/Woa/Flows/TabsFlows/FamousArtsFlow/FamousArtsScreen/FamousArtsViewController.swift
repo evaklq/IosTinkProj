@@ -8,7 +8,6 @@
 import UIKit
 
 class FamousArtsViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }

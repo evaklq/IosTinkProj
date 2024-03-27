@@ -8,7 +8,6 @@
 import Foundation
 
 class AuthCoordinator: BaseCoordinator {
-
     var router: Router
 
     init(router: Router) {
@@ -21,15 +20,14 @@ class AuthCoordinator: BaseCoordinator {
 }
 
 extension AuthCoordinator {
-
     private func showSignUpController() {
         let signUpViewModel = SignUpViewModel()
         let signUpController = SignUpViewController(viewModel: signUpViewModel)
         signUpController.flowCompletionHandlerWithValue = { [weak self] states in
             switch states {
-            case .reg:
+            case .alreadyReg:
                 self?.showLogInController()
-            case .unreg:
+            case .needReg:
                 self?.flowCompletionHandler?()
             }
         }
