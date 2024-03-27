@@ -17,6 +17,5 @@ protocol RouterProtocol {
 
     func dismiss(animated: Bool)
 
-    func setRootController(_ controller: UIViewController)
     func setRootController(_ controller: UIViewController, isNavigationBarHidden: Bool)
 }

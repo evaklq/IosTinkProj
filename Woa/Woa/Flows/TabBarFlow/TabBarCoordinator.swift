@@ -8,9 +8,10 @@
 import UIKit
 
 class TabBarCoordinator: BaseCoordinator {
-
+    // MARK: - Declaration objects
     private var tabBarDelegateProtocol: TabBarDelegateProtocol
 
+    // MARK: - Init
     init(controller: TabBarDelegateProtocol) {
         self.tabBarDelegateProtocol = controller
     }
@@ -24,8 +25,8 @@ class TabBarCoordinator: BaseCoordinator {
     }
 }
 
+// MARK: - Configure flows actions
 extension TabBarCoordinator {
-
     private func runFamousArtsFlow() -> ((UINavigationController) -> Void) {
         return { [unowned self] navigationController in
             if navigationController.viewControllers.isEmpty {

@@ -8,5 +8,5 @@
 import Foundation
 
 enum UserAccountStatus {
-    case reg, unreg
+    case needReg, alreadyReg
 }

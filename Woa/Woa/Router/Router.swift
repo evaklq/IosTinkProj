@@ -19,6 +19,7 @@ final class Router: RouterProtocol {
     }
 
     func push(_ controller: UIViewController, animated: Bool) {
+        configureNavBar()
         rootController?.pushViewController(controller, animated: animated)
     }
 
@@ -34,16 +35,19 @@ final class Router: RouterProtocol {
         rootController?.dismiss(animated: animated)
     }
 
-    func setRootController(_ controller: UIViewController) {
-        rootController?.setViewControllers([controller], animated: false)
-    }
-
-    func setRootController(_ controller: UIViewController, isNavigationBarHidden: Bool) {
-        rootController?.setViewControllers([controller], animated: false)
+    func setRootController(_ controller: UIViewController, isNavigationBarHidden: Bool = false) {
+        configureNavBar()
         rootController?.isNavigationBarHidden = isNavigationBarHidden
+        rootController?.setViewControllers([controller], animated: false)
     }
 
     func presenter() -> UINavigationController? {
         return rootController
+    }
+
+    private func configureNavBar() {
+        let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.rootController?.navigationBar.topItem?.backBarButtonItem = backButton
+        self.rootController?.navigationBar.tintColor = Asset.Colors.general.color
     }
 }

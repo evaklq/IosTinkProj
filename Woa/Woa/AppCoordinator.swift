@@ -28,12 +28,12 @@ class AppCoordinator: BaseCoordinator {
 
     private func runAuthFlow() {
         let authFlowCoordinator = coordinatorFactory.createAuthCoordinator(router: router)
-        authFlowCoordinator.start()
         addDependency(authFlowCoordinator)
         authFlowCoordinator.flowCompletionHandler = { [weak self] in
             self?.runTabBarFlow()
             self?.removeDependency(authFlowCoordinator)
         }
+        authFlowCoordinator.start()
     }
 
     private func runTabBarFlow() {
