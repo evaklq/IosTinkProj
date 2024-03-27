@@ -16,7 +16,7 @@ class LogInViewController: UIViewController, ControllerProtocol {
     // MARK: - Init
     init(viewModel: LogInViewModel) {
         self.viewModel = viewModel
-        self.logInView = .init()
+        self.logInView = LogInView()
         super.init(nibName: nil, bundle: nil)
     }
     required init?(coder: NSCoder) {

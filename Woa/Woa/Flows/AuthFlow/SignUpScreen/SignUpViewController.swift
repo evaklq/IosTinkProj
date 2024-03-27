@@ -16,7 +16,7 @@ class SignUpViewController: UIViewController, ControllerWithValueProtocol {
     // MARK: - Init
     init(viewModel: SignUpViewModel) {
         self.viewModel = viewModel
-        self.signView = .init()
+        self.signView = SignUpView()
         super.init(nibName: nil, bundle: nil)
     }
     required init?(coder: NSCoder) {
@@ -25,7 +25,7 @@ class SignUpViewController: UIViewController, ControllerWithValueProtocol {
 
     // MARK: - Load view
     override func loadView() {
-        view = signView
+        view = SignUpView()
     }
     override func viewDidLoad() {
         super.viewDidLoad()

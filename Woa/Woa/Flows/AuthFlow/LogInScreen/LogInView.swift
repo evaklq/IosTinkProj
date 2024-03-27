@@ -13,7 +13,8 @@ protocol LogInViewDelegate: AnyObject {
 }
 
 class LogInView: BaseView {
-    // MARK: - Declaration Objects
+    // MARK: - Subviews
+    weak var delegate: LogInViewDelegate?
     private lazy var backImage: UIImageView = UIImageView(image: Asset.Assets.authDecor.image.withTintColor(Asset.Colors.backDecor.color))
     private lazy var nickTextField = createDefaultTextField(Strings.nick)
     private lazy var nickErrorsLabel = createErrorLabel()
@@ -23,12 +24,10 @@ class LogInView: BaseView {
     private lazy var logInButton = createDefaultButton(Strings.authButton, logInAction)
     private var logInAction = UIAction { _ in }
 
-    weak var delegate: LogInViewDelegate?
-
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureActions()
+        createLogInAction()
         configureUI()
     }
     required init?(coder: NSCoder) {
@@ -38,16 +37,12 @@ class LogInView: BaseView {
 
 // MARK: - Configure Actions
 extension LogInView {
-    private func configureActions() {
-        logInAction = createLogInAction()
-    }
-
-    private func createLogInAction() -> UIAction {
+    private func createLogInAction() {
         let action = UIAction { [weak self] _ in
             guard let self else { return }
             self.delegate?.didPressLogIn(self.nickTextField.text, self.passTextField.text)
         }
-        return action
+        logInAction = action
     }
 }
 

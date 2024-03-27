@@ -44,7 +44,9 @@ final class Router: RouterProtocol {
     func presenter() -> UINavigationController? {
         return rootController
     }
+}
 
+extension Router {
     private func configureNavBar() {
         let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.rootController?.navigationBar.topItem?.backBarButtonItem = backButton
