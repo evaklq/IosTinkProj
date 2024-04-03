@@ -25,7 +25,7 @@ class SignUpViewController: UIViewController, ControllerWithValueProtocol {
 
     // MARK: - Load view
     override func loadView() {
-        view = SignUpView()
+        view = signView
     }
     override func viewDidLoad() {
         super.viewDidLoad()
