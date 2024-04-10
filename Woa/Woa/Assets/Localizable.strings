@@ -11,7 +11,26 @@
 "pass" = "Password";
 "email" = "Email";
 "age" = "Age";
+"icon" = "IconId";
 
 "authButton" = "Start your trip";
 "alreadyRegButton" = "Already regregistered?";
 
+// MARK: - Firebase Services
+"db" = "users";
+"avatars" = "avatars";
+
+"specialSet" = "!@#$%^&*()-_=+[{]}|;:'\",.<>?`~";
+"capitalSet" = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+"numbersSet" = "0123456789";
+
+"emptyData" = " can't be empty";
+"lenth" = " lenth has to be ";
+"special" = " must contain special characters";
+"notSpecial" = " can't contain special characters";
+"capital" = " must contain capital letters";
+"numbers" = " must contain numbers";
+"arabic" = " must contain only Arabic letters";
+"incorrect" = "Incorrect ";
+
+"emailReg" = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
