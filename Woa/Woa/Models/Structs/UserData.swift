@@ -17,13 +17,23 @@ struct UserData {
     var id: String
 
     /// For create user first time with password
-    init(nick: String, email: String, password: String, age: Int, icon: URL? = nil, id: String) {
+    init(nick: String, email: String, password: String, age: Int, icon: URL? = nil) {
         self.nick = nick
         self.email = email
         self.password = password
         self.age = age
         self.iconURL = icon
-        self.id = id
+        self.id = ""
+    }
+
+    /// For create user first time with password from nil accept params (checked for nil before)
+    init(nick: String?, email: String?, password: String?, age: Int?, icon: URL? = nil) {
+        self.nick = nick ?? ""
+        self.email = email ?? ""
+        self.password = password ?? ""
+        self.age = age ?? 0
+        self.iconURL = icon
+        self.id = ""
     }
 
     /// For create user data with firebase user
@@ -49,10 +59,10 @@ struct UserData {
     /// Get user data in array format
     var userData: [String: Any] {
         var data: [String: Any] = [:]
-        data[Strings.nick] = nick
-        data[Strings.age] = age
-        data[Strings.email] = email
-        data[Strings.icon] = iconURL?.absoluteString
+        data[Strings.Title.nick] = nick
+        data[Strings.Title.age] = age
+        data[Strings.Title.email] = email
+        data[Strings.Title.icon] = iconURL?.absoluteString
 
         return data
     }

@@ -12,5 +12,5 @@ enum ValidationErrorType {
 }
 
 protocol ValidationServiceProtocol {
-    func validateUser(nick: String, email: String, password: String, age: Int) -> [ValidationErrorType: [String]]?
+    func validateUser(nick: String?, email: String?, password: String?, age: Int?) -> [ValidationErrorType: [String]]?
 }

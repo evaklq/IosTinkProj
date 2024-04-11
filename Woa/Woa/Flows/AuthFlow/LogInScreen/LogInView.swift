@@ -16,12 +16,12 @@ class LogInView: BaseView {
     // MARK: - Subviews
     weak var delegate: LogInViewDelegate?
     private lazy var backImage: UIImageView = UIImageView(image: Asset.Assets.authDecor.image.withTintColor(Asset.Colors.backDecor.color))
-    private lazy var nickTextField = createDefaultTextField(Strings.nick)
-    private lazy var nickErrorsLabel = createErrorLabel()
-    private lazy var passTextField = createDefaultTextField(Strings.pass)
+    private lazy var emailTextField = createDefaultTextField(Strings.Title.email)
+    private lazy var emailErrorsLabel = createErrorLabel()
+    private lazy var passTextField = createDefaultTextField(Strings.Title.pass)
     private lazy var passErrorsLabel = createErrorLabel()
 
-    private lazy var logInButton = createDefaultButton(Strings.authButton, logInAction)
+    private lazy var logInButton = createDefaultButton(Strings.Button.auth, logInAction)
     private var logInAction = UIAction { _ in }
 
     // MARK: - Init
@@ -30,8 +30,18 @@ class LogInView: BaseView {
         createLogInAction()
         configureUI()
     }
+    convenience init(frame: CGRect, email: String?, pass: String?) {
+        self.init(frame: frame)
+        configureTextFields(email: email, pass: pass)
+    }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension LogInView {
+    func getAlert(_ mes: String) -> UIAlertController {
+        createErrorAlert(mes)
     }
 }
 
@@ -40,7 +50,7 @@ extension LogInView {
     private func createLogInAction() {
         let action = UIAction { [weak self] _ in
             guard let self else { return }
-            self.delegate?.didPressLogIn(self.nickTextField.text, self.passTextField.text)
+            self.delegate?.didPressLogIn(self.emailTextField.text, self.passTextField.text)
         }
         logInAction = action
     }
@@ -53,13 +63,13 @@ extension LogInView {
         backView.addSubview(backImage)
         backView.backgroundColor = Asset.Colors.back.color
 
-        let textFields = [nickTextField, passTextField]
+        let textFields = [emailTextField, passTextField]
         let textFieldsStackView = UIStackView(arrangedSubviews: textFields)
 
         textFieldsStackView.axis = .vertical
         textFieldsStackView.spacing = 30
 
-        addSubviews([backView, textFieldsStackView, nickErrorsLabel, passErrorsLabel, logInButton])
+        addSubviews([backView, textFieldsStackView, emailErrorsLabel, passErrorsLabel, logInButton])
 
         backView.snp.makeConstraints { make in
             make.top.leading.trailing.bottom.equalToSuperview()
@@ -77,7 +87,7 @@ extension LogInView {
         }
 
         setHeight(height: 47, views: textFields)
-        setErrors(label: nickErrorsLabel, textFiled: nickTextField)
+        setErrors(label: emailErrorsLabel, textFiled: emailTextField)
         setErrors(label: passErrorsLabel, textFiled: passTextField)
 
         logInButton.snp.makeConstraints { make in
@@ -86,5 +96,11 @@ extension LogInView {
             make.width.equalTo(150)
             make.height.equalTo(40)
         }
+    }
+
+    private func configureTextFields(email: String?, pass: String?) {
+        guard let email = email, let pass = pass else { return }
+        emailTextField.text = email
+        passTextField.text = pass
     }
 }

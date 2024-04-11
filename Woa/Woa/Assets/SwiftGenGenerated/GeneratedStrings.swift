@@ -10,53 +10,71 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 public enum Strings {
-  /// Age
-  public static let age = Strings.tr("Localizable", "age", fallback: "Age")
-  /// Already regregistered?
-  public static let alreadyRegButton = Strings.tr("Localizable", "alreadyRegButton", fallback: "Already regregistered?")
-  ///  must contain only Arabic letters
-  public static let arabic = Strings.tr("Localizable", "arabic", fallback: " must contain only Arabic letters")
-  /// abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
-  public static let arabicAndNumbersSet = Strings.tr("Localizable", "arabicAndNumbersSet", fallback: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
-  /// Start your trip
-  public static let authButton = Strings.tr("Localizable", "authButton", fallback: "Start your trip")
-  /// avatars
-  public static let avatars = Strings.tr("Localizable", "avatars", fallback: "avatars")
-  ///  must contain capital letters
-  public static let capital = Strings.tr("Localizable", "capital", fallback: " must contain capital letters")
-  /// ABCDEFGHIJKLMNOPQRSTUVWXYZ
-  public static let capitalSet = Strings.tr("Localizable", "capitalSet", fallback: "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-  /// users
-  public static let db = Strings.tr("Localizable", "db", fallback: "users")
-  /// Email
-  public static let email = Strings.tr("Localizable", "email", fallback: "Email")
-  /// ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$
-  public static let emailReg = Strings.tr("Localizable", "emailReg", fallback: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$")
-  ///  can't be empty
-  public static let emptyData = Strings.tr("Localizable", "emptyData", fallback: " can't be empty")
-  /// IconId
-  public static let icon = Strings.tr("Localizable", "icon", fallback: "IconId")
-  /// Incorrect 
-  public static let incorrect = Strings.tr("Localizable", "incorrect", fallback: "Incorrect ")
-  ///  lenth has to be 
-  public static let lenth = Strings.tr("Localizable", "lenth", fallback: " lenth has to be ")
-  /// Localizable.strings
-  ///   Woa
-  /// 
-  ///   Created by Mac on 2024-03-22.
-  public static let nick = Strings.tr("Localizable", "nick", fallback: "Nick")
-  ///  can't contain special characters
-  public static let notSpecial = Strings.tr("Localizable", "notSpecial", fallback: " can't contain special characters")
-  ///  must contain numbers
-  public static let numbers = Strings.tr("Localizable", "numbers", fallback: " must contain numbers")
-  /// 0123456789
-  public static let numbersSet = Strings.tr("Localizable", "numbersSet", fallback: "0123456789")
-  /// Password
-  public static let pass = Strings.tr("Localizable", "pass", fallback: "Password")
-  ///  must contain special characters
-  public static let special = Strings.tr("Localizable", "special", fallback: " must contain special characters")
-  /// !@#$%^&*()-_=+[{]}|;:'",.<>?`~
-  public static let specialSet = Strings.tr("Localizable", "specialSet", fallback: "!@#$%^&*()-_=+[{]}|;:'\",.<>?`~")
+  public enum Alert {
+    /// Ok
+    public static let ok = Strings.tr("Localizable", "alert.ok", fallback: "Ok")
+  }
+  public enum Button {
+    /// Already regregistered?
+    public static let alreadyReg = Strings.tr("Localizable", "button.alreadyReg", fallback: "Already regregistered?")
+    /// Start your trip
+    public static let auth = Strings.tr("Localizable", "button.auth", fallback: "Start your trip")
+  }
+  public enum Error {
+    ///  can't contain special characters
+    public static let cantHasSpecial = Strings.tr("Localizable", "error.cantHasSpecial", fallback: " can't contain special characters")
+    ///  can't be empty
+    public static let emptyData = Strings.tr("Localizable", "error.emptyData", fallback: " can't be empty")
+    /// Incorrect 
+    public static let incorrect = Strings.tr("Localizable", "error.incorrect", fallback: "Incorrect ")
+    ///  length has to be 
+    public static let length = Strings.tr("Localizable", "error.length", fallback: " length has to be ")
+    ///  must contain capital letters
+    public static let needCapital = Strings.tr("Localizable", "error.needCapital", fallback: " must contain capital letters")
+    ///  must contain numbers
+    public static let needNumbers = Strings.tr("Localizable", "error.needNumbers", fallback: " must contain numbers")
+    ///  must contain special characters
+    public static let needSpecial = Strings.tr("Localizable", "error.needSpecial", fallback: " must contain special characters")
+    ///  must contain only Arabic letters
+    public static let onlyArabic = Strings.tr("Localizable", "error.onlyArabic", fallback: " must contain only Arabic letters")
+    public enum Alert {
+      /// System error, please try again
+      public static let signup = Strings.tr("Localizable", "error.alert.signup", fallback: "System error, please try again")
+    }
+  }
+  public enum Firebase {
+    public enum Folder {
+      /// avatars
+      public static let avatars = Strings.tr("Localizable", "firebase.folder.avatars", fallback: "avatars")
+      /// users
+      public static let db = Strings.tr("Localizable", "firebase.folder.db", fallback: "users")
+    }
+  }
+  public enum Set {
+    /// ABCDEFGHIJKLMNOPQRSTUVWXYZ
+    public static let capital = Strings.tr("Localizable", "set.capital", fallback: "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    /// ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$
+    public static let email = Strings.tr("Localizable", "set.email", fallback: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$")
+    /// 0123456789
+    public static let numbers = Strings.tr("Localizable", "set.numbers", fallback: "0123456789")
+    /// !@#$%^&*()-_=+[{]}|;:'",.<>?`~
+    public static let special = Strings.tr("Localizable", "set.special", fallback: "!@#$%^&*()-_=+[{]}|;:'\",.<>?`~")
+  }
+  public enum Title {
+    /// Age
+    public static let age = Strings.tr("Localizable", "title.age", fallback: "Age")
+    /// Email
+    public static let email = Strings.tr("Localizable", "title.email", fallback: "Email")
+    /// IconId
+    public static let icon = Strings.tr("Localizable", "title.icon", fallback: "IconId")
+    /// Localizable.strings
+    ///   Woa
+    /// 
+    ///   Created by Mac on 2024-03-22.
+    public static let nick = Strings.tr("Localizable", "title.nick", fallback: "Nick")
+    /// Password
+    public static let pass = Strings.tr("Localizable", "title.pass", fallback: "Password")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

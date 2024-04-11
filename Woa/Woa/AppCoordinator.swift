@@ -9,11 +9,10 @@ import UIKit
 
 class AppCoordinator: BaseCoordinator {
     private var router: Router
-    private let authService: AuthService
+    private let authService = AuthService.shared
 
     init(router: Router) {
         self.router = router
-        authService = AuthService()
     }
 
     // хардкод 0_о

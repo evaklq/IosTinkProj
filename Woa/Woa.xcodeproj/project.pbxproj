@@ -66,6 +66,7 @@
 		04B274442BAD7AC3009362F0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04B274432BAD7AC3009362F0 /* Localizable.strings */; };
 		04B274462BAD7B9E009362F0 /* GeneratedAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B274452BAD7B9E009362F0 /* GeneratedAssets.swift */; };
 		04B274482BAD7BA6009362F0 /* GeneratedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B274472BAD7BA6009362F0 /* GeneratedStrings.swift */; };
+		04C998022BC6D6C500087BEC /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C998012BC6D6C500087BEC /* Observable.swift */; };
 		13A28A115BABBBAF3C2CE6DE /* Pods_Woa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E130540D2C1BF3E0F3714F /* Pods_Woa.framework */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +132,7 @@
 		04B274432BAD7AC3009362F0 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		04B274452BAD7B9E009362F0 /* GeneratedAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedAssets.swift; sourceTree = "<group>"; };
 		04B274472BAD7BA6009362F0 /* GeneratedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedStrings.swift; sourceTree = "<group>"; };
+		04C998012BC6D6C500087BEC /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		250985628AF8451C3F100E1E /* Pods-Woa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woa.release.xcconfig"; path = "Target Support Files/Pods-Woa/Pods-Woa.release.xcconfig"; sourceTree = "<group>"; };
 		88E130540D2C1BF3E0F3714F /* Pods_Woa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Woa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6AF0CE2FECB64E56A8D7D5 /* Pods-Woa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woa.debug.xcconfig"; path = "Target Support Files/Pods-Woa/Pods-Woa.debug.xcconfig"; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				046D28E92BAA4FF0004A9E2B /* Typealiases.swift */,
+				04C998012BC6D6C500087BEC /* Observable.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -686,6 +689,7 @@
 				049149132BC3114900E2F79C /* FirestoreDbService.swift in Sources */,
 				046D289F2BAA0C17004A9E2B /* ContainerControllerType.swift in Sources */,
 				046D28A22BAA0D39004A9E2B /* CoordinatorFactoryProtocol.swift in Sources */,
+				04C998022BC6D6C500087BEC /* Observable.swift in Sources */,
 				0491491D2BC33D1A00E2F79C /* ValidationServiceProtocol.swift in Sources */,
 				049149152BC33C1100E2F79C /* FirebaseError.swift in Sources */,
 				046D28C92BAA3254004A9E2B /* ArtsStoreCoordinator.swift in Sources */,

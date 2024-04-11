@@ -15,7 +15,7 @@ final class StorageService: StorageServiceProtocol {
 
     // MARK: - Init
     private init() {
-        self.referense = Storage.storage().reference().child(Strings.avatars)
+        self.referense = Storage.storage().reference().child(Strings.Firebase.Folder.avatars)
     }
 
     func changeUserIcon(with userId: String, icon: UIImage, completion: @escaping (Result<URL, any Error>) -> Void) {
@@ -28,7 +28,7 @@ final class StorageService: StorageServiceProtocol {
         metaData.contentType = "image/jpeg"
 
         userRef.putData(imageData, metadata: metaData) { metadata, error in
-            guard let _ = metadata else {
+            if metadata == nil {
                 completion(.failure(FirebaseError.nilData))
                 return
             }

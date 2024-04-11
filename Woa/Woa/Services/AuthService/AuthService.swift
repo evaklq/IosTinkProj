@@ -10,21 +10,21 @@ import FirebaseAuth
 
 final class AuthService: ReadOnlyAuthServiceProtocol {
     // MARK: - Declaration objects
-    typealias UserType = User
-    var currentUser: User? {
+    static let shared = AuthService()
+    var currentUser: AuthUserProtocol? {
         return auth.currentUser
     }
     private let auth: Auth
 
     // MARK: - Init
-    init() {
+    private init() {
         self.auth = Auth.auth()
     }
 }
 
 // MARK: - Autn functions
 extension AuthService {
-    func signUp(with user: UserData, completion: @escaping (Result<User, Error>) -> Void) {
+    func signUp(with user: UserData, completion: @escaping (Result<AuthUserProtocol, Error>) -> Void) {
         guard let password = user.password else {
             completion(.failure(FirebaseError.nilData))
             return
@@ -38,7 +38,7 @@ extension AuthService {
         }
     }
 
-    func signIn(with user: UserData, completion: @escaping (Result<User, Error>) -> Void) {
+    func signIn(with user: UserData, completion: @escaping (Result<AuthUserProtocol, Error>) -> Void) {
         guard let password = user.password else {
             completion(.failure(FirebaseError.nilData))
             return

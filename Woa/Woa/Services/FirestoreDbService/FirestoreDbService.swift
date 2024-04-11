@@ -15,7 +15,7 @@ final class FirestoreDbService: FirestoreDbServiceProtocol {
 
     // MARK: - Init
     private init() {
-        self.database = Firestore.firestore().collection(Strings.db)
+        self.database = Firestore.firestore().collection(Strings.Firebase.Folder.db)
     }
 
     func saveUserData(with user: UserData, completion: @escaping (Result<UserData, Error>) -> Void) {
@@ -60,10 +60,10 @@ private extension FirestoreDbService {
     /// Create object of UserData from firestore's array with data
     func arrayToUserData(_ data: [String: Any]?, _ userId: String) -> Result<UserData, FirebaseError> {
         guard let data = data else { return .failure(.documentDataError) }
-        guard case let .success(nick) = getString(data, Strings.nick),
-            case let .success(age) = getInt(data, Strings.age),
-            case let .success(email) = getString(data, Strings.email),
-            case let .success(iconUrl) = getUrl(data, Strings.icon) else {
+        guard case let .success(nick) = getString(data, "Strings.nick"),
+            case let .success(age) = getInt(data, "Strings.age"),
+            case let .success(email) = getString(data, "Strings.email"),
+            case let .success(iconUrl) = getUrl(data, "Strings.icon") else {
             return .failure(.incorrectData)
         }
 
