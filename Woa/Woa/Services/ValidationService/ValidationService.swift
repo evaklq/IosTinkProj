@@ -23,17 +23,9 @@ final class ValidationService: ValidationServiceProtocol {
     }
 
     func validateUser(nick: String?, email: String?, password: String?, age: Int?) -> [ValidationErrorType: [String]]? {
-        nickValidationErrors = []
-        emailValidationErrors = []
-        passValidationErrors = []
-        ageValidationErrors = []
+        let isValidData = isValidData(nick: nick, email: email, password: password, age: age)
 
-        let isValidNick = isValidNick(with: nick)
-        let isValidEmail = isValidEmail(with: email)
-        let isValidPass = isValidPass(with: password)
-        let isValidAge = isValidAge(with: age)
-
-        if isValidNick && isValidEmail && isValidPass && isValidAge {
+        if isValidData {
             return nil
         } else {
             let errors: [ValidationErrorType: [String]] = [
@@ -48,8 +40,19 @@ final class ValidationService: ValidationServiceProtocol {
     }
 }
 
-extension ValidationService {
-    private func isValidNick(with nick: String?) -> Bool {
+private extension ValidationService {
+    func isValidData(nick: String?, email: String?, password: String?, age: Int?) -> Bool {
+        let isValidNick = isValidNick(with: nick)
+        let isValidEmail = isValidEmail(with: email)
+        let isValidPass = isValidPass(with: password)
+        let isValidAge = isValidAge(with: age)
+
+        if isValidNick && isValidEmail && isValidPass && isValidAge {
+            return true
+        } else { return false }
+    }
+
+    func isValidNick(with nick: String?) -> Bool {
         guard let nick = nick else {
             let emtyNickError = Strings.Title.nick + Strings.Error.emptyData
             nickValidationErrors.append(emtyNickError)
@@ -79,7 +82,7 @@ extension ValidationService {
         return true
     }
 
-    private func isValidEmail(with email: String?) -> Bool {
+    func isValidEmail(with email: String?) -> Bool {
         guard let email = email else {
             let emtyEmailError = Strings.Title.email + Strings.Error.emptyData
             emailValidationErrors.append(emtyEmailError)
@@ -105,7 +108,7 @@ extension ValidationService {
         return true
     }
 
-    private func isValidPass(with pass: String?) -> Bool {
+    func isValidPass(with pass: String?) -> Bool {
         guard let pass = pass else {
             let emtyPassError = Strings.Title.pass + Strings.Error.emptyData
             passValidationErrors.append(emtyPassError)
@@ -149,7 +152,7 @@ extension ValidationService {
         return true
     }
 
-    private func isValidAge(with age: Int?) -> Bool {
+    func isValidAge(with age: Int?) -> Bool {
         guard let age = age else {
             let emtyAgeError = Strings.Title.age + Strings.Error.emptyData
             ageValidationErrors.append(emtyAgeError)

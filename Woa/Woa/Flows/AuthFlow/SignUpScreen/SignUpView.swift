@@ -9,8 +9,8 @@ import UIKit
 import SnapKit
 
 protocol SignUpViewDelegate: AnyObject {
-    func didPressReg(_ nick: String?, _ email: String?, _ age: Int?, _ pass: String?)
-    func didPressAlreadyReg(_ email: String?, _ pass: String?)
+    func didTapRegistrationButton(_ nick: String?, _ email: String?, _ age: Int?, _ pass: String?)
+    func didTapAlreadyRegistredButton(_ email: String?, _ pass: String?)
 }
 
 class SignUpView: BaseView {
@@ -29,8 +29,8 @@ class SignUpView: BaseView {
     private lazy var regButton = createDefaultButton(Strings.Button.auth, regAction)
     private lazy var alreadyRegButton = createTextButton(Strings.Button.alreadyReg, alreadyRegAction)
 
-    private var regAction = UIAction { _ in }
-    private var alreadyRegAction = UIAction { _ in }
+    private var regAction: UIAction?
+    private var alreadyRegAction: UIAction?
 
     // MARK: - Init
     override init(frame: CGRect) {
@@ -39,6 +39,7 @@ class SignUpView: BaseView {
         configureAlreadyRegAction()
         configureUI()
     }
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -50,7 +51,7 @@ extension SignUpView {
         let action = UIAction { [weak self] _ in
             guard let self else { return }
             let age = Int(self.ageTextField.text ?? "-1")
-            self.delegate?.didPressReg(self.nickTextField.text, self.emailTextField.text, age, self.passTextField.text)
+            self.delegate?.didTapRegistrationButton(self.nickTextField.text, self.emailTextField.text, age, self.passTextField.text)
         }
         regAction = action
     }
@@ -58,7 +59,7 @@ extension SignUpView {
     private func configureAlreadyRegAction() {
         let action = UIAction { [weak self] _ in
             guard let self else { return }
-            self.delegate?.didPressAlreadyReg(self.emailTextField.text, self.passTextField.text)
+            self.delegate?.didTapAlreadyRegistredButton(self.emailTextField.text, self.passTextField.text)
         }
         alreadyRegAction = action
     }

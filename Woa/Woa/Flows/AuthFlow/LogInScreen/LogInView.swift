@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 protocol LogInViewDelegate: AnyObject {
-    func didPressLogIn(_ nick: String?, _ pass: String?)
+    func didTapLogInButton(_ nick: String?, _ pass: String?)
 }
 
 class LogInView: BaseView {
@@ -22,7 +22,7 @@ class LogInView: BaseView {
     private lazy var passErrorsLabel = createErrorLabel()
 
     private lazy var logInButton = createDefaultButton(Strings.Button.auth, logInAction)
-    private var logInAction = UIAction { _ in }
+    private var logInAction: UIAction?
 
     // MARK: - Init
     override init(frame: CGRect) {
@@ -30,10 +30,12 @@ class LogInView: BaseView {
         createLogInAction()
         configureUI()
     }
+
     convenience init(frame: CGRect, email: String?, pass: String?) {
         self.init(frame: frame)
         configureTextFields(email: email, pass: pass)
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -50,7 +52,7 @@ extension LogInView {
     private func createLogInAction() {
         let action = UIAction { [weak self] _ in
             guard let self else { return }
-            self.delegate?.didPressLogIn(self.emailTextField.text, self.passTextField.text)
+            self.delegate?.didTapLogInButton(self.emailTextField.text, self.passTextField.text)
         }
         logInAction = action
     }

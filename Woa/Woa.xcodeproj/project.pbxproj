@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0417BA302BCDAA12001DE706 /* SignUpInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0417BA2F2BCDAA12001DE706 /* SignUpInfo.swift */; };
+		0417BA322BCDABB4001DE706 /* AuthUserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0417BA312BCDABB4001DE706 /* AuthUserProtocol.swift */; };
 		0447D7F62BAC8678001B22FB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0447D7F52BAC8678001B22FB /* Colors.xcassets */; };
 		045B077F2BA9729C000FAD08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B077E2BA9729C000FAD08 /* AppDelegate.swift */; };
 		045B07812BA9729C000FAD08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B07802BA9729C000FAD08 /* SceneDelegate.swift */; };
@@ -71,6 +73,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0417BA2F2BCDAA12001DE706 /* SignUpInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInfo.swift; sourceTree = "<group>"; };
+		0417BA312BCDABB4001DE706 /* AuthUserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserProtocol.swift; sourceTree = "<group>"; };
 		0447D7F52BAC8678001B22FB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		045B077B2BA9729C000FAD08 /* Woa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Woa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045B077E2BA9729C000FAD08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -442,6 +446,7 @@
 			isa = PBXGroup;
 			children = (
 				0491490C2BC2DF4000E2F79C /* AuthServiceProtocol.swift */,
+				0417BA312BCDABB4001DE706 /* AuthUserProtocol.swift */,
 				046D28AE2BAA2582004A9E2B /* AuthService.swift */,
 			);
 			path = AuthService;
@@ -488,6 +493,7 @@
 			isa = PBXGroup;
 			children = (
 				0491490A2BC2D1F500E2F79C /* UserData.swift */,
+				0417BA2F2BCDAA12001DE706 /* SignUpInfo.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -671,6 +677,7 @@
 				046D28C22BAA30EB004A9E2B /* FamousArtsView.swift in Sources */,
 				046D288F2BA9FCAD004A9E2B /* SignUpView.swift in Sources */,
 				045B07832BA9729C000FAD08 /* SignUpViewController.swift in Sources */,
+				0417BA302BCDAA12001DE706 /* SignUpInfo.swift in Sources */,
 				046D28AF2BAA2582004A9E2B /* AuthService.swift in Sources */,
 				046D28DB2BAA336B004A9E2B /* ProfileCoordinator.swift in Sources */,
 				046D28D72BAA333D004A9E2B /* CartViewModel.swift in Sources */,
@@ -695,6 +702,7 @@
 				046D28C92BAA3254004A9E2B /* ArtsStoreCoordinator.swift in Sources */,
 				046D28E72BAA4EF6004A9E2B /* ControllerProtocol.swift in Sources */,
 				046D28C02BAA30D6004A9E2B /* FamousArtsViewController.swift in Sources */,
+				0417BA322BCDABB4001DE706 /* AuthUserProtocol.swift in Sources */,
 				046D28962BA9FD53004A9E2B /* LogInViewController.swift in Sources */,
 				0491490B2BC2D1F500E2F79C /* UserData.swift in Sources */,
 				046D28EC2BAA52B1004A9E2B /* ControllerWithValueProtocol.swift in Sources */,

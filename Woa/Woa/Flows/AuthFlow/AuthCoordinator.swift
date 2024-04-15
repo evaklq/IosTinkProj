@@ -27,10 +27,11 @@ extension AuthCoordinator {
     private func showSignUpController() {
         let signUpViewModel = SignUpViewModel(auth: authService, validation: validationService, dataBase: dbService)
         let signUpController = SignUpViewController(viewModel: signUpViewModel)
-        signUpController.flowCompletionHandlerWithValue = { [weak self] states in
-            switch states.0 {
+        signUpController.flowCompletionHandlerWithValue = { [weak self] info in
+            let states = info.accountState
+            switch states {
             case .alreadyReg:
-                self?.showLogInController(states.1, states.2)
+                self?.showLogInController(info.email, info.pass)
             case .needReg:
                 self?.flowCompletionHandler?()
             }
