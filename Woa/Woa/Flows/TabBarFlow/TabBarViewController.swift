@@ -21,6 +21,7 @@ class TabBarViewController: UITabBarController, TabBarDelegateProtocol {
         configureUI()
         delegate = self
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         if let controller = customizableViewControllers?.first as? UINavigationController {
             onViewDidAppear?(controller)
