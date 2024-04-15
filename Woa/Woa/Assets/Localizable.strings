@@ -6,12 +6,35 @@
   
 */
 
-// MARK: - Auth Screens
-"nick" = "Nick";
-"pass" = "Password";
-"email" = "Email";
-"age" = "Age";
+// MARK: - Titles
+"title.nick" = "Nick";
+"title.pass" = "Password";
+"title.email" = "Email";
+"title.age" = "Age";
+"title.icon" = "IconId";
 
-"authButton" = "Start your trip";
-"alreadyRegButton" = "Already regregistered?";
+// MARK: - Buttons
+"button.auth" = "Start your trip";
+"button.alreadyReg" = "Already regregistered?";
 
+// MARK: - Firebase Services
+"firebase.folder.db" = "users";
+"firebase.folder.avatars" = "avatars";
+
+// MARK: - Validations Sets
+"set.special" = "!@#$%^&*()-_=+[{]}|;:'\",.<>?`~";
+"set.capital" = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+"set.numbers" = "0123456789";
+"set.email" = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+
+// MARK: - Errors
+"error.emptyData" = " can't be empty";
+"error.length" = " length has to be ";
+"error.needSpecial" = " must contain special characters";
+"error.cantHasSpecial" = " can't contain special characters";
+"error.needCapital" = " must contain capital letters";
+"error.needNumbers" = " must contain numbers";
+"error.onlyArabic" = " must contain only Arabic letters";
+"error.incorrect" = "Incorrect ";
+"error.alert.signup" = "System error, please try again";
+"alert.ok" = "Ok";
