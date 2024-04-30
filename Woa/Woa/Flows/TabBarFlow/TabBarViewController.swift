@@ -21,7 +21,7 @@ class TabBarViewController: UITabBarController, TabBarDelegateProtocol {
         configureUI()
         delegate = self
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         if let controller = customizableViewControllers?.first as? UINavigationController {
             onViewDidAppear?(controller)
@@ -57,14 +57,13 @@ extension TabBarViewController {
         let cartImage = Asset.Assets.cart.image
         let userImage = Asset.Assets.user.image
 
-        let viewControllers = [
+        setViewControllers([
             createController(houseImage),
             createController(shopImage),
             createController(cartImage),
             createController(userImage)
-        ]
+        ], animated: true)
 
-        setViewControllers(viewControllers, animated: true)
         tabBar.unselectedItemTintColor = Asset.Colors.icons.color
         tabBar.tintColor = Asset.Colors.selectedIcons.color
         view.backgroundColor = Asset.Colors.back.color

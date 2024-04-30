@@ -44,7 +44,7 @@ extension AppCoordinator {
         tabBarCoordinator.flowCompletionHandler = { [weak self] in
             self?.removeDependency(tabBarCoordinator)
         }
-        router.setRootController(tabBarViewController, isNavigationBarHidden: true)
+        router.setRootController(tabBarViewController, isNavigationBarHidden: false)
         tabBarCoordinator.start()
     }
 }

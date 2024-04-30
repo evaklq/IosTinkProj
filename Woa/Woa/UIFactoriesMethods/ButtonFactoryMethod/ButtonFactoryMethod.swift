@@ -1,0 +1,66 @@
+//
+//  ButtonFactoryMethod.swift
+//  Woa
+//
+//  Created by evaklq on 2024-04-16.
+//
+
+import UIKit
+
+final class ButtonFactoryMethod: ButtonFactoryMethodProtocol {
+    func createButton(type: ButtonType, action: UIAction?, title: String?, isLike: Bool?) -> UIButton {
+        switch type {
+        case .default:
+            createDefaultButton(title, action)
+        case .text:
+            getBaseButton(title, action)
+        case .like:
+            createLikeButton(action, isLike)
+        }
+    }
+}
+
+private extension ButtonFactoryMethod {
+    func createDefaultButton(_ title: String?, _ action: UIAction?) -> UIButton {
+        let button = getBaseButton(title, action, weight: .bold)
+        button.titleLabel?.lineBreakMode = .byTruncatingTail
+        button.layer.cornerRadius = 20
+        button.layer.borderWidth = 1.5
+
+        return button
+    }
+
+    func createLikeButton(_ action: UIAction?, _ isLike: Bool?) -> UIButton {
+        let button = UIButton()
+        let imageUnselected = Asset.Assets.likeUnselected.image
+        let imageSelected = Asset.Assets.likeSelected.image
+        guard let action else { return button }
+
+        button.addAction(action, for: .touchUpInside)
+        button.setImage(imageUnselected, for: .normal)
+        button.setImage(imageSelected, for: .selected)
+
+        if let isLike = isLike {
+            button.isSelected = isLike
+        } else {
+            button.isSelected = false
+        }
+
+        return button
+    }
+
+    func getBaseButton(_ title: String?, _ action: UIAction?, size: Int = 14, weight: UIFont.Weight = .regular) -> UIButton {
+        let button = UIButton()
+        guard let action else { return button }
+        guard let title else { return button }
+
+        button.setTitle(title, for: .normal)
+        button.backgroundColor = UIColor.clear
+        button.addAction(action, for: .touchUpInside)
+        button.layer.borderColor = Asset.Colors.general.color.cgColor
+        button.setTitleColor(Asset.Colors.general.color, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(size), weight: weight)
+
+        return button
+    }
+}

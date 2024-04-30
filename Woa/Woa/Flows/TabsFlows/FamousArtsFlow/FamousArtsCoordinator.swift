@@ -10,6 +10,7 @@ import UIKit
 class FamousArtsCoordinator: BaseCoordinator {
 
     var router: Router
+    private let controllerFactory = ControllerFactory()
 
     init(router: Router) {
         self.router = router
@@ -20,7 +21,7 @@ class FamousArtsCoordinator: BaseCoordinator {
     }
 
     private func showFamousArtsController() {
-        let famousArtsController = FamousArtsViewController()
+        let famousArtsController = controllerFactory.createFamousArtsController()
         router.setRootController(famousArtsController)
     }
 }

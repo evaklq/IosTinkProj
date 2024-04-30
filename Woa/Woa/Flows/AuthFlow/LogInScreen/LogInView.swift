@@ -13,16 +13,22 @@ protocol LogInViewDelegate: AnyObject {
 }
 
 class LogInView: BaseView {
-    // MARK: - Subviews
-    weak var delegate: LogInViewDelegate?
-    private lazy var backImage: UIImageView = UIImageView(image: Asset.Assets.authDecor.image.withTintColor(Asset.Colors.backDecor.color))
-    private lazy var emailTextField = createDefaultTextField(Strings.Title.email)
-    private lazy var emailErrorsLabel = createErrorLabel()
-    private lazy var passTextField = createDefaultTextField(Strings.Title.pass)
-    private lazy var passErrorsLabel = createErrorLabel()
+    // MARK: - UI elements
+    private lazy var emailTextField = uiFactory.createTextField(type: .default, placeholder: Strings.Title.email)
+    private lazy var passTextField = uiFactory.createTextField(type: .default, placeholder: Strings.Title.pass)
+    private lazy var logInButton = uiFactory.createButton(type: .default, action: logInAction, title: Strings.Button.auth)
 
-    private lazy var logInButton = createDefaultButton(Strings.Button.auth, logInAction)
+    private lazy var emailErrorsLabel = uiFactory.createLabel(type: .error)
+    private lazy var passErrorsLabel = uiFactory.createLabel(type: .error)
+
+    private lazy var color = Asset.Colors.backDecor.color
+    private lazy var decorImag = Asset.Assets.authDecor.image.withTintColor(color)
+    private lazy var backImage = UIImageView(image: decorImag)
+
     private var logInAction: UIAction?
+
+    // MARK: - Variables
+    weak var delegate: LogInViewDelegate?
 
     // MARK: - Init
     override init(frame: CGRect) {
@@ -41,15 +47,16 @@ class LogInView: BaseView {
     }
 }
 
+// MARK: - Configure errors from controller
 extension LogInView {
     func getAlert(_ mes: String) -> UIAlertController {
-        createErrorAlert(mes)
+        uiFactory.createAlert(type: .error, message: mes)
     }
 }
 
 // MARK: - Configure Actions
-extension LogInView {
-    private func createLogInAction() {
+private extension LogInView {
+    func createLogInAction() {
         let action = UIAction { [weak self] _ in
             guard let self else { return }
             self.delegate?.didTapLogInButton(self.emailTextField.text, self.passTextField.text)
@@ -58,9 +65,9 @@ extension LogInView {
     }
 }
 
-// MARK: - Configure Constrains
-extension LogInView {
-    private func configureUI() {
+// MARK: - Configure UI
+private extension LogInView {
+    func configureUI() {
         let backView = UIView()
         backView.addSubview(backImage)
         backView.backgroundColor = Asset.Colors.back.color
@@ -100,7 +107,7 @@ extension LogInView {
         }
     }
 
-    private func configureTextFields(email: String?, pass: String?) {
+    func configureTextFields(email: String?, pass: String?) {
         guard let email = email, let pass = pass else { return }
         emailTextField.text = email
         passTextField.text = pass

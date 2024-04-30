@@ -39,12 +39,12 @@ class LogInViewController: UIViewController, ControllerProtocol {
 // MARK: - Bindings
 private extension LogInViewController {
     func setupBindings() {
-        viewModel.firebaseError.bind { (errors) in
-            guard let errors else { return }
+        viewModel.firebaseError.bind { [weak self] (errors) in
+            guard let errors, let self else { return }
             if errors.isEmpty {
                 return
             }
-            showSignInErrorAlert(message: errors)
+            self.showSignInErrorAlert(message: errors)
         }
 
         viewModel.isSuccessfullyLogIn.bind { [weak self] (isSucLogIn) in
@@ -53,12 +53,12 @@ private extension LogInViewController {
                 self.flowCompletionHandler?()
             }
         }
+    }
 
-        func showSignInErrorAlert(message: String?) {
-            guard let message = message else { return }
-            let alert = logInView.getAlert(message)
-            present(alert, animated: true)
-        }
+    func showSignInErrorAlert(message: String?) {
+        guard let message = message else { return }
+        let alert = logInView.getAlert(message)
+        present(alert, animated: true)
     }
 }
 

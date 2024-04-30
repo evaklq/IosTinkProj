@@ -12,6 +12,9 @@
 "title.email" = "Email";
 "title.age" = "Age";
 "title.icon" = "IconId";
+"title.welcomeUser" = "Welcome, ";
+"title.mainFindTextField" = "Find your favorite art";
+"title.popularArts" = "Popular arts";
 
 // MARK: - Buttons
 "button.auth" = "Start your trip";

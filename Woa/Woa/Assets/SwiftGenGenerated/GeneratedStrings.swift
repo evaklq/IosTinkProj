@@ -67,6 +67,8 @@ public enum Strings {
     public static let email = Strings.tr("Localizable", "title.email", fallback: "Email")
     /// IconId
     public static let icon = Strings.tr("Localizable", "title.icon", fallback: "IconId")
+    /// Find your favorite art
+    public static let mainFindTextField = Strings.tr("Localizable", "title.mainFindTextField", fallback: "Find your favorite art")
     /// Localizable.strings
     ///   Woa
     /// 
@@ -74,6 +76,10 @@ public enum Strings {
     public static let nick = Strings.tr("Localizable", "title.nick", fallback: "Nick")
     /// Password
     public static let pass = Strings.tr("Localizable", "title.pass", fallback: "Password")
+    /// Popular arts
+    public static let popularArts = Strings.tr("Localizable", "title.popularArts", fallback: "Popular arts")
+    /// Welcome, 
+    public static let welcomeUser = Strings.tr("Localizable", "title.welcomeUser", fallback: "Welcome, ")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
