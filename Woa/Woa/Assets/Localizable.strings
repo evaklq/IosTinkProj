@@ -12,13 +12,17 @@
 "title.email" = "Email";
 "title.age" = "Age";
 "title.icon" = "IconId";
+"title.year" = " year";
+"title.cost" = "₽ ";
 "title.welcomeUser" = "Welcome, ";
 "title.mainFindTextField" = "Find your favorite art";
 "title.popularArts" = "Popular arts";
+"title.shoppingCart" = "Your shopping cart";
 
 // MARK: - Buttons
 "button.auth" = "Start your trip";
 "button.alreadyReg" = "Already regregistered?";
+"button.buy" = "Buy";
 
 // MARK: - Firebase Services
 "firebase.folder.db" = "users";

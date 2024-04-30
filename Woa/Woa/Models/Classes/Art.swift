@@ -14,13 +14,28 @@ class Art {
     var name: String
     var type: ArtType
     var isLike: Bool
+    var isInCart: Bool
+    var cost: String
 
-    init( type: ArtType, image: UIImage, name: String, year: Int, isLike: Bool = false) {
+    init(type: ArtType, image: UIImage, name: String, year: Int, isLike: Bool = false, isInCart: Bool = false, cost: Double = 0) {
         self.image = image
         self.year = year
-        self.stringYear = year.description + " year"
+        self.stringYear = year.description + Strings.Title.year
         self.name = name
         self.type = type
         self.isLike = isLike
+        self.isInCart = isInCart
+        self.cost = Strings.Title.cost + cost.description
+    }
+
+    init(type: ArtType, image: UIImage, name: String, year: Int, isLike: Bool = false, isInCart: Bool = false, cost: String = "") {
+        self.image = image
+        self.year = year
+        self.stringYear = year.description + Strings.Title.year
+        self.name = name
+        self.type = type
+        self.isLike = isLike
+        self.isInCart = isInCart
+        self.cost = Strings.Title.cost + cost
     }
 }

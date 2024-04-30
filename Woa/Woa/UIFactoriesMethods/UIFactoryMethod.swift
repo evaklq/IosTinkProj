@@ -13,8 +13,8 @@ final class UIFactoryMethod: UIFactoryMethodProtocol {
     private let textFieldFactoryMethod = TextFieldFactoryMethod()
     private let alertFactoryMethod = AlertFactoryMethod()
 
-    func createButton(type: ButtonType, action: UIAction? = nil, title: String? = nil, isLike: Bool? = nil) -> UIButton {
-        buttonFactoryMethod.createButton(type: type, action: action, title: title, isLike: isLike)
+    func createButton(type: ButtonType, action: UIAction? = nil, title: String? = nil, isLike: Bool? = nil, isInCart: Bool? = nil) -> UIButton {
+        buttonFactoryMethod.createButton(type: type, action: action, title: title, isLike: isLike, isInCart: isInCart)
     }
     func createLabel(type: LabelType, text: String? = nil, size: Int? = nil) -> UILabel {
         labelFactoryMethod.createLabel(text: text, size: size, type: type)

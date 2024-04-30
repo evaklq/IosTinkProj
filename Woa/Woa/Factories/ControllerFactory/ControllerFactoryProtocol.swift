@@ -10,4 +10,6 @@ import Foundation
 protocol ControllerFactoryProtocol {
     func createSignUpController() -> SignUpViewController
     func createLogInController(email: String?, pass: String?) -> LogInViewController
+    func createFamousArtsController() -> FamousArtsViewController
+    func createCartController() -> CartViewController
 }

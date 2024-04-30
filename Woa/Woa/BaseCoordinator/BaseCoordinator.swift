@@ -11,11 +11,13 @@ class BaseCoordinator: CoordinatorProtocol {
     var flowCompletionHandler: CompletionHandler?
     var childCoordinators: [CoordinatorProtocol]
     var coordinatorFactory: CoordinatorFactoryProtocol
-    
+    var controllerFactory: ControllerFactoryProtocol
+
     // MARK: - Init
     init() {
         childCoordinators = []
         coordinatorFactory = CoordinatorFactory()
+        controllerFactory = ControllerFactory()
     }
 
     /// func to override in subclasses

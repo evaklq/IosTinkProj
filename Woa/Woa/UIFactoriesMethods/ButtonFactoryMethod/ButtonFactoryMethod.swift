@@ -8,7 +8,7 @@
 import UIKit
 
 final class ButtonFactoryMethod: ButtonFactoryMethodProtocol {
-    func createButton(type: ButtonType, action: UIAction?, title: String?, isLike: Bool?) -> UIButton {
+    func createButton(type: ButtonType, action: UIAction?, title: String?, isLike: Bool?, isInCart: Bool?) -> UIButton {
         switch type {
         case .default:
             createDefaultButton(title, action)
@@ -16,6 +16,8 @@ final class ButtonFactoryMethod: ButtonFactoryMethodProtocol {
             getBaseButton(title, action)
         case .like:
             createLikeButton(action, isLike)
+        case .cart:
+            createCartButton(action, isInCart)
         }
     }
 }
@@ -42,6 +44,25 @@ private extension ButtonFactoryMethod {
 
         if let isLike = isLike {
             button.isSelected = isLike
+        } else {
+            button.isSelected = false
+        }
+
+        return button
+    }
+
+    func createCartButton(_ action: UIAction?, _ isInCart: Bool?) -> UIButton {
+        let button = UIButton()
+        let imageUnselected = Asset.Assets.cartS.image
+        let imageSelected = Asset.Assets.cartSelected.image
+        guard let action else { return button }
+
+        button.addAction(action, for: .touchUpInside)
+        button.setImage(imageUnselected, for: .normal)
+        button.setImage(imageSelected, for: .selected)
+
+        if let isInCart = isInCart {
+            button.isSelected = isInCart
         } else {
             button.isSelected = false
         }

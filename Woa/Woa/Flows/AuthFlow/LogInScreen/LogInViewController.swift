@@ -19,7 +19,6 @@ class LogInViewController: UIViewController, ControllerProtocol {
         self.logInView = LogInView(frame: CGRect.zero, email: email, pass: pass)
         super.init(nibName: nil, bundle: nil)
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

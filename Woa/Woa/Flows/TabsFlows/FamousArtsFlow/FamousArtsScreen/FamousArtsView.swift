@@ -20,7 +20,8 @@ class FamousArtsView: BaseView {
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        createSearchAction()
+        configureSearchAction()
+        configureTable()
         configureUI()
     }
     required init?(coder: NSCoder) {
@@ -28,6 +29,7 @@ class FamousArtsView: BaseView {
     }
 }
 
+// MARK: - Configure table from ViewController
 extension FamousArtsView {
     func setTableDataSource(_ dataSource: UITableViewDataSource) {
         popularArtsTable.dataSource = dataSource
@@ -37,17 +39,25 @@ extension FamousArtsView {
     }
 }
 
+// MARK: - Configure table
 private extension FamousArtsView {
-    func createSearchAction() {
+    func configureTable() {
+        popularArtsTable.register(BaseViewCell.self, forCellReuseIdentifier: BaseViewCell.reuseIdentifier)
+    }
+}
+
+// MARK: - Configure actions
+private extension FamousArtsView {
+    func configureSearchAction() {
         let action = UIAction { [weak self] _ in
-            // guard let self else { return }
+            guard let self else { return }
             print("search")
         }
         searchAction = action
     }
 }
 
-// MARK: - Configure Ui
+// MARK: - Configure UI
 private extension FamousArtsView {
     func configureUI() {
         addSubviews([wecomeUserLabel, searchArtTextField, popularArtsLabel, popularArtsTable])

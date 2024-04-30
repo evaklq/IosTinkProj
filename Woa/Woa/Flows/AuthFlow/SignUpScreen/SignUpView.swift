@@ -44,6 +44,8 @@ class SignUpView: BaseView {
         configureRegAction()
         configureAlreadyRegAction()
         configureUI()
+        emailTextField.text = "missis.1220@mail.ru"
+        passTextField.text = "Evaklq1!!"
     }
 
     required init?(coder: NSCoder) {

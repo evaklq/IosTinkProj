@@ -26,6 +26,9 @@
 		0417BAB22BD04F31001DE706 /* ArtType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0417BAB12BD04F31001DE706 /* ArtType.swift */; };
 		0417BAB52BD08762001DE706 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0417BAB42BD08762001DE706 /* Like.swift */; };
 		042A97972BE070FB0023FBBF /* FamousArtsDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042A97962BE070FB0023FBBF /* FamousArtsDataSourse.swift */; };
+		042A979C2BE0D1080023FBBF /* CartViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042A979B2BE0D1080023FBBF /* CartViewCell.swift */; };
+		042A979E2BE0D2570023FBBF /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042A979D2BE0D2570023FBBF /* Cart.swift */; };
+		042A97A02BE0DBDA0023FBBF /* CartDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042A979F2BE0DBDA0023FBBF /* CartDataSourse.swift */; };
 		0447D7F62BAC8678001B22FB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0447D7F52BAC8678001B22FB /* Colors.xcassets */; };
 		045B077F2BA9729C000FAD08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B077E2BA9729C000FAD08 /* AppDelegate.swift */; };
 		045B07812BA9729C000FAD08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B07802BA9729C000FAD08 /* SceneDelegate.swift */; };
@@ -109,6 +112,9 @@
 		0417BAB12BD04F31001DE706 /* ArtType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtType.swift; sourceTree = "<group>"; };
 		0417BAB42BD08762001DE706 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		042A97962BE070FB0023FBBF /* FamousArtsDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamousArtsDataSourse.swift; sourceTree = "<group>"; };
+		042A979B2BE0D1080023FBBF /* CartViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewCell.swift; sourceTree = "<group>"; };
+		042A979D2BE0D2570023FBBF /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		042A979F2BE0DBDA0023FBBF /* CartDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartDataSourse.swift; sourceTree = "<group>"; };
 		0447D7F52BAC8678001B22FB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		045B077B2BA9729C000FAD08 /* Woa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Woa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045B077E2BA9729C000FAD08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -483,6 +489,8 @@
 		046D28D32BAA3315004A9E2B /* CartScreen */ = {
 			isa = PBXGroup;
 			children = (
+				042A979F2BE0DBDA0023FBBF /* CartDataSourse.swift */,
+				042A979B2BE0D1080023FBBF /* CartViewCell.swift */,
 				046D28D42BAA3331004A9E2B /* CartViewController.swift */,
 				046D28D62BAA333D004A9E2B /* CartViewModel.swift */,
 				046D28D82BAA3347004A9E2B /* CartView.swift */,
@@ -609,6 +617,7 @@
 				0491490A2BC2D1F500E2F79C /* UserData.swift */,
 				0417BA2F2BCDAA12001DE706 /* SignUpInfo.swift */,
 				0417BAB42BD08762001DE706 /* Like.swift */,
+				042A979D2BE0D2570023FBBF /* Cart.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -817,6 +826,7 @@
 				046D28A22BAA0D39004A9E2B /* CoordinatorFactoryProtocol.swift in Sources */,
 				04C998022BC6D6C500087BEC /* Observable.swift in Sources */,
 				0491491D2BC33D1A00E2F79C /* ValidationServiceProtocol.swift in Sources */,
+				042A97A02BE0DBDA0023FBBF /* CartDataSourse.swift in Sources */,
 				049149152BC33C1100E2F79C /* FirebaseError.swift in Sources */,
 				0417BA452BCDF7CB001DE706 /* UIFactoryMethodProtocol.swift in Sources */,
 				0417BA3C2BCDEC5F001DE706 /* BaseViewCell.swift in Sources */,
@@ -841,6 +851,7 @@
 				0491491A2BC33CDE00E2F79C /* StorageService.swift in Sources */,
 				0417BA532BCEA50A001DE706 /* AlertFactoryMethodProtocol.swift in Sources */,
 				049149112BC3066300E2F79C /* FirestoreDbServiceProtocol.swift in Sources */,
+				042A979E2BE0D2570023FBBF /* Cart.swift in Sources */,
 				046D28A72BAA0EAA004A9E2B /* Router.swift in Sources */,
 				046D28D02BAA32D7004A9E2B /* ArtsStoreView.swift in Sources */,
 				046D28C62BAA31AE004A9E2B /* FamousArtsViewModel.swift in Sources */,
@@ -857,6 +868,7 @@
 				045B077F2BA9729C000FAD08 /* AppDelegate.swift in Sources */,
 				0417BA4F2BCE00FB001DE706 /* TextFieldFactoryMethodProtocol.swift in Sources */,
 				0417BA472BCDF8AB001DE706 /* ButtonFactoryMethodProtocol.swift in Sources */,
+				042A979C2BE0D1080023FBBF /* CartViewCell.swift in Sources */,
 				045B07812BA9729C000FAD08 /* SceneDelegate.swift in Sources */,
 				046D28EE2BAA5A13004A9E2B /* UserAccountStatus.swift in Sources */,
 				046D28DE2BAA338B004A9E2B /* ProfileViewController.swift in Sources */,

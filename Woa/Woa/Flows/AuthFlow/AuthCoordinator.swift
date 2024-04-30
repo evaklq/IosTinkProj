@@ -9,7 +9,6 @@ import Foundation
 
 class AuthCoordinator: BaseCoordinator {
     var router: Router
-    private let controllerFactory = ControllerFactory()
 
     init(router: Router) {
         self.router = router

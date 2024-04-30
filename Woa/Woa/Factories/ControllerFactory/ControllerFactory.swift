@@ -42,4 +42,12 @@ final class ControllerFactory: ControllerFactoryProtocol {
 
         return controller
     }
+
+    func createCartController() -> CartViewController {
+        let viewModel = CartViewModel()
+        let controller = CartViewController(viewModel: viewModel)
+
+        return controller
+    }
+
 }

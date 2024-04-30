@@ -19,6 +19,8 @@ public enum Strings {
     public static let alreadyReg = Strings.tr("Localizable", "button.alreadyReg", fallback: "Already regregistered?")
     /// Start your trip
     public static let auth = Strings.tr("Localizable", "button.auth", fallback: "Start your trip")
+    /// Buy
+    public static let buy = Strings.tr("Localizable", "button.buy", fallback: "Buy")
   }
   public enum Error {
     ///  can't contain special characters
@@ -63,6 +65,8 @@ public enum Strings {
   public enum Title {
     /// Age
     public static let age = Strings.tr("Localizable", "title.age", fallback: "Age")
+    /// ₽ 
+    public static let cost = Strings.tr("Localizable", "title.cost", fallback: "₽ ")
     /// Email
     public static let email = Strings.tr("Localizable", "title.email", fallback: "Email")
     /// IconId
@@ -78,8 +82,12 @@ public enum Strings {
     public static let pass = Strings.tr("Localizable", "title.pass", fallback: "Password")
     /// Popular arts
     public static let popularArts = Strings.tr("Localizable", "title.popularArts", fallback: "Popular arts")
+    /// Your shopping cart
+    public static let shoppingCart = Strings.tr("Localizable", "title.shoppingCart", fallback: "Your shopping cart")
     /// Welcome, 
     public static let welcomeUser = Strings.tr("Localizable", "title.welcomeUser", fallback: "Welcome, ")
+    ///  year
+    public static let year = Strings.tr("Localizable", "title.year", fallback: " year")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

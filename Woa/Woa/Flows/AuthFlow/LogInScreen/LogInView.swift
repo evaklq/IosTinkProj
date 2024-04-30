@@ -41,7 +41,6 @@ class LogInView: BaseView {
         self.init(frame: frame)
         configureTextFields(email: email, pass: pass)
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

@@ -27,7 +27,9 @@ internal enum Asset {
   internal enum Assets {
     internal static let authDecor = ImageAsset(name: "authDecor")
     internal static let cart = ImageAsset(name: "cart")
+    internal static let cartDecor = ImageAsset(name: "cartDecor")
     internal static let cartS = ImageAsset(name: "cartS")
+    internal static let cartSelected = ImageAsset(name: "cartSelected")
     internal static let example = ImageAsset(name: "example")
     internal static let findIcon = ImageAsset(name: "findIcon")
     internal static let house = ImageAsset(name: "house")
@@ -44,6 +46,7 @@ internal enum Asset {
     internal static let back = ColorAsset(name: "back")
     internal static let backDecor = ColorAsset(name: "backDecor")
     internal static let chosenScreen = ColorAsset(name: "chosenScreen")
+    internal static let cost = ColorAsset(name: "cost")
     internal static let error = ColorAsset(name: "error")
     internal static let general = ColorAsset(name: "general")
     internal static let icons = ColorAsset(name: "icons")

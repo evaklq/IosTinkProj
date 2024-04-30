@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+class CartViewModel {
+    var artsInCart = Observable([Art]())
+
+    func getArtsFromCart() {
+    }
+}
