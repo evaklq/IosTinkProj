@@ -50,4 +50,17 @@ final class ControllerFactory: ControllerFactoryProtocol {
         return controller
     }
 
+    func createArtsStoreController() -> ArtsStoreViewController {
+        let viewModel = ArtsStoreViewModel()
+        let controller = ArtsStoreViewController(viewModel: viewModel)
+
+        return controller
+    }
+
+    func createProfileController() -> ProfileViewController {
+        let viewModel = ProfileViewModel()
+        let controller = ProfileViewController(viewModel: viewModel)
+
+        return controller
+    }
 }

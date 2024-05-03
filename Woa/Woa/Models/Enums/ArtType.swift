@@ -17,15 +17,15 @@ enum ArtType: String {
     var description: String {
         switch self {
         case .picture:
-            return "Picture"
+            return Strings.Title.picture
         case .sculpture:
-            return "Sculpture"
+            return Strings.Title.sculpture
         case .photo:
-            return "Photo"
+            return Strings.Title.photo
         case .graphics:
-            return "Graphics"
+            return Strings.Title.graphics
         case .artObject:
-            return "Art Object"
+            return Strings.Title.artObject
         }
     }
 }

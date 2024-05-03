@@ -95,7 +95,7 @@ private extension CartView {
         artsInCartTable.snp.makeConstraints { make in
             make.top.equalTo(cartLabel.snp.bottom).offset(20)
             make.leading.trailing.equalToSuperview().inset(25)
-            make.bottom.equalToSuperview().offset(-70)
+            make.bottom.equalToSuperview().offset(-80)
         }
 
         buyButton.snp.makeConstraints { make in

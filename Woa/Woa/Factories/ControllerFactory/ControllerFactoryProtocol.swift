@@ -12,4 +12,6 @@ protocol ControllerFactoryProtocol {
     func createLogInController(email: String?, pass: String?) -> LogInViewController
     func createFamousArtsController() -> FamousArtsViewController
     func createCartController() -> CartViewController
+    func createArtsStoreController() -> ArtsStoreViewController
+    func createProfileController() -> ProfileViewController
 }

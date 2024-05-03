@@ -50,6 +50,7 @@ private extension LabelFactoryMethod {
 
     func createBaseLabel(_ text: String?, _ color: UIColor, weight: UIFont.Weight = .regular, size: Int = 16) -> UILabel {
         let label = UILabel()
+        label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: CGFloat(size), weight: weight)
         label.textColor = color
         label.text = text

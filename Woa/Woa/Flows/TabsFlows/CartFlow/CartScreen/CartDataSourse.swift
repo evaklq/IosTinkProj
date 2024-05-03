@@ -10,6 +10,12 @@ import UIKit
 class CartDataSourse: NSObject {
     private var artsInCart: [Art] = [
         Art(type: .artObject, image: Asset.Assets.example.image, name: "Name", year: 2005, isLike: true, isInCart: true, cost: "1000"),
+        Art(type: .graphics, image: Asset.Assets.example.image, name: "Name", year: 2002, isLike: false, isInCart: true, cost: 2000),
+        Art(type: .artObject, image: Asset.Assets.example.image, name: "Name", year: 2005, isLike: true, isInCart: true, cost: "1000"),
+        Art(type: .graphics, image: Asset.Assets.example.image, name: "Name", year: 2002, isLike: false, isInCart: true, cost: 2000),
+        Art(type: .artObject, image: Asset.Assets.example.image, name: "Name", year: 2005, isLike: true, isInCart: true, cost: "1000"),
+        Art(type: .graphics, image: Asset.Assets.example.image, name: "Name", year: 2002, isLike: false, isInCart: true, cost: 2000),
+        Art(type: .artObject, image: Asset.Assets.example.image, name: "Name", year: 2005, isLike: true, isInCart: true, cost: "1000"),
         Art(type: .graphics, image: Asset.Assets.example.image, name: "Name", year: 2002, isLike: false, isInCart: true, cost: 2000)
     ]
 

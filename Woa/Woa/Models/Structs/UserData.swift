@@ -16,6 +16,7 @@ struct UserData {
     var iconURL: URL?
     var id: String
     var likeArts: [Art]?
+    var cartArts: [Art]?
 
     /// For create user first time with password
     init(nick: String, email: String, password: String, age: Int, icon: URL? = nil) {
