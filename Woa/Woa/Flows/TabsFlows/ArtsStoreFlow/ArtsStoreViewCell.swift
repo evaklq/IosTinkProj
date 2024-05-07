@@ -9,10 +9,10 @@ import UIKit
 
 class ArtsStoreViewCell: UICollectionViewCell {
     // MARK: - UI elements
-    private lazy var backImage = UIImageView(image: Asset.Assets.backCell.image)
+    private lazy var backImage = UIImageView(image: Asset.Assets.backCell.image.withTintColor(Asset.Colors.backDecor.color))
     private lazy var artImage = UIImageView()
     private lazy var costLabel = uiFactory.createLabel(type: .default)
-    private lazy var titleLabel = uiFactory.createLabel(type: .title)
+    private lazy var titleLabel = uiFactory.createLabel(type: .default)
 
     // MARK: - Constants
     private let uiFactory = UIFactoryMethod()
@@ -50,7 +50,7 @@ private extension ArtsStoreViewCell {
         labelsSV.spacing = 4
 
         backgroundColor = Asset.Colors.back.color
-        artImage.contentMode = .scaleAspectFill
+        artImage.contentMode = .scaleAspectFit
         backImage.contentMode = .scaleAspectFill
         costLabel.textColor = Asset.Colors.cost.color
 
@@ -59,7 +59,9 @@ private extension ArtsStoreViewCell {
         contentView.addSubview(labelsSV)
 
         backImage.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.equalToSuperview().offset(3)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(176)
         }
 
         artImage.snp.makeConstraints { make in
@@ -71,8 +73,8 @@ private extension ArtsStoreViewCell {
         }
 
         labelsSV.snp.makeConstraints { make in
-            make.top.equalTo(backImage.snp.bottom).offset(10)
-            make.leading.trailing.equalTo(backImage.snp.leading)
+            make.top.equalTo(backImage.snp.bottom).offset(20)
+            make.leading.trailing.equalToSuperview()
         }
     }
 }

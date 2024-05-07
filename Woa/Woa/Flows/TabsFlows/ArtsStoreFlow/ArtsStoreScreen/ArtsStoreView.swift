@@ -119,17 +119,19 @@ private extension ArtsStoreView {
 private extension ArtsStoreView {
     func configureUI() {
         addSubviews([wecomeUserLabel, searchArtTextField, mainScrollView])
-        mainScrollView.addSubview(picturesLabel)
-        mainScrollView.addSubview(sculpturesLabel)
-        mainScrollView.addSubview(photosLabel)
-        mainScrollView.addSubview(graphicsLabel)
-        mainScrollView.addSubview(artsObjectsLabel)
+        let mainView = UIView()
+        mainScrollView.addSubview(mainView)
+        mainView.addSubview(picturesLabel)
+        mainView.addSubview(sculpturesLabel)
+        mainView.addSubview(photosLabel)
+        mainView.addSubview(graphicsLabel)
+        mainView.addSubview(artsObjectsLabel)
 
-        mainScrollView.addSubview(picturesCollectionView)
-        mainScrollView.addSubview(sculpturesCollectionView)
-        mainScrollView.addSubview(photosCollectionView)
-        mainScrollView.addSubview(graphicsCollectionView)
-        mainScrollView.addSubview(artsObjectsCollectionView)
+        mainView.addSubview(picturesCollectionView)
+        mainView.addSubview(sculpturesCollectionView)
+        mainView.addSubview(photosCollectionView)
+        mainView.addSubview(graphicsCollectionView)
+        mainView.addSubview(artsObjectsCollectionView)
 
         setHeight(height: 47, views: [searchArtTextField])
 
@@ -152,6 +154,11 @@ private extension ArtsStoreView {
             make.bottom.equalToSuperview()
         }
 
+        mainView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+            make.width.equalToSuperview()
+        }
+
         picturesLabel.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.leading.equalToSuperview()
@@ -160,7 +167,7 @@ private extension ArtsStoreView {
         picturesCollectionView.snp.makeConstraints { make in
             make.top.equalTo(picturesLabel.snp.bottom).offset(20)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(270)
+            make.height.equalTo(260)
         }
 
         sculpturesLabel.snp.makeConstraints { make in
@@ -205,6 +212,7 @@ private extension ArtsStoreView {
             make.top.equalTo(artsObjectsLabel.snp.bottom).offset(20)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(260)
+            make.bottom.equalToSuperview().offset(-20)
         }
     }
 }

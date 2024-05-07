@@ -11,6 +11,5 @@ class FamousArtsViewModel {
     var popularArts = Observable([Art]())
 
     func getPopularArts() {
-        
     }
 }

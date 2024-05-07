@@ -13,7 +13,7 @@ final class LabelFactoryMethod: LabelFactoryMethodProtocol {
         case .default:
             createDefaultLabel(text, size)
         case .title:
-            createTitleLabel(text)
+            createTitleLabel(text, size)
         case .error:
             createErrorLabel()
         }
@@ -33,9 +33,9 @@ private extension LabelFactoryMethod {
         return label
     }
 
-    func createTitleLabel(_ text: String?) -> UILabel {
+    func createTitleLabel(_ text: String?, _ size: Int? = 20) -> UILabel {
         let color = Asset.Colors.general.color
-        let label = createBaseLabel(text, color, weight: .bold, size: 20)
+        let label = createBaseLabel(text, color, weight: .bold, size: size ?? 20)
 
         return label
     }

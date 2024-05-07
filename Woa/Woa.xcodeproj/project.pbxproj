@@ -95,6 +95,7 @@
 		04B274462BAD7B9E009362F0 /* GeneratedAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B274452BAD7B9E009362F0 /* GeneratedAssets.swift */; };
 		04B274482BAD7BA6009362F0 /* GeneratedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B274472BAD7BA6009362F0 /* GeneratedStrings.swift */; };
 		04C998022BC6D6C500087BEC /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C998012BC6D6C500087BEC /* Observable.swift */; };
+		04E4457D2BE4CF6A00AAB806 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4457C2BE4CF6A00AAB806 /* NetworkService.swift */; };
 		13A28A115BABBBAF3C2CE6DE /* Pods_Woa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E130540D2C1BF3E0F3714F /* Pods_Woa.framework */; };
 /* End PBXBuildFile section */
 
@@ -189,6 +190,7 @@
 		04B274452BAD7B9E009362F0 /* GeneratedAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedAssets.swift; sourceTree = "<group>"; };
 		04B274472BAD7BA6009362F0 /* GeneratedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedStrings.swift; sourceTree = "<group>"; };
 		04C998012BC6D6C500087BEC /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		04E4457C2BE4CF6A00AAB806 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		250985628AF8451C3F100E1E /* Pods-Woa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woa.release.xcconfig"; path = "Target Support Files/Pods-Woa/Pods-Woa.release.xcconfig"; sourceTree = "<group>"; };
 		88E130540D2C1BF3E0F3714F /* Pods_Woa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Woa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6AF0CE2FECB64E56A8D7D5 /* Pods-Woa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woa.debug.xcconfig"; path = "Target Support Files/Pods-Woa/Pods-Woa.debug.xcconfig"; sourceTree = "<group>"; };
@@ -418,6 +420,7 @@
 				049149162BC33C9B00E2F79C /* StorageService */,
 				0491490F2BC305C900E2F79C /* FirestoreDbService */,
 				0491490E2BC2F1F700E2F79C /* AuthService */,
+				04E4457C2BE4CF6A00AAB806 /* NetworkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -843,6 +846,7 @@
 				0417BA552BCEA582001DE706 /* AlertFactoryMethod.swift in Sources */,
 				042A97AD2BE29F980023FBBF /* GraphicsDataSourse.swift in Sources */,
 				0417BAB02BD04EA4001DE706 /* Art.swift in Sources */,
+				04E4457D2BE4CF6A00AAB806 /* NetworkService.swift in Sources */,
 				046D28942BA9FD3C004A9E2B /* LogInView.swift in Sources */,
 				049149182BC33CC500E2F79C /* StorageServiceProtocol.swift in Sources */,
 				042A97AF2BE29FC50023FBBF /* ArtObjectsDataSourse.swift in Sources */,
