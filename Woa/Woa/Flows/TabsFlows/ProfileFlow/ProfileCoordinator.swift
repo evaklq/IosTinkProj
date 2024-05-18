@@ -20,7 +20,7 @@ class ProfileCoordinator: BaseCoordinator {
     }
 
     private func showProfileController() {
-        let profileController = ProfileViewController()
+        let profileController = controllerFactory.createProfileController()
         router.setRootController(profileController)
     }
 }

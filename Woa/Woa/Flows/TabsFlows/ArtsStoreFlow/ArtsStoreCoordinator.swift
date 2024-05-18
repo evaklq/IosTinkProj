@@ -20,7 +20,7 @@ class ArtsStoreCoordinator: BaseCoordinator {
     }
 
     private func showArtsStoreController() {
-        let artsStoreController = ArtsStoreViewController()
+        let artsStoreController = controllerFactory.createArtsStoreController()
         router.setRootController(artsStoreController)
     }
 }

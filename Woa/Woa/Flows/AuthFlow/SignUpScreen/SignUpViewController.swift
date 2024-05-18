@@ -9,10 +9,10 @@ import UIKit
 
 class SignUpViewController: UIViewController, ControllerWithValueProtocol {
     // MARK: - Declaration objects
-    var isNeedToClearErrors = Observable(false)
-    var flowCompletionHandlerWithValue: CompletionHandlerWithValue<SignUpInfo>?
     private let viewModel: SignUpViewModel
     private let signView: SignUpView
+    var isNeedToClearErrors = Observable(false)
+    var flowCompletionHandlerWithValue: CompletionHandlerWithValue<SignUpInfo>?
 
     // MARK: - Init
     init(viewModel: SignUpViewModel) {

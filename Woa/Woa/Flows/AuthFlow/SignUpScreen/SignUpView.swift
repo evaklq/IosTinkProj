@@ -14,23 +14,29 @@ protocol SignUpViewDelegate: AnyObject {
 }
 
 class SignUpView: BaseView {
-    // MARK: - Subviews
-    weak var delegate: SignUpViewDelegate?
-    private lazy var nickTextField = createDefaultTextField(Strings.Title.nick)
-    private lazy var nickErrorsLabel = createErrorLabel()
-    private lazy var passTextField = createDefaultTextField(Strings.Title.pass)
-    private lazy var passErrorsLabel = createErrorLabel()
-    private lazy var emailTextField = createDefaultTextField(Strings.Title.email)
-    private lazy var emailErrorsLabel = createErrorLabel()
-    private lazy var ageTextField = createDefaultTextField(Strings.Title.age)
-    private lazy var ageErrorsLabel = createErrorLabel()
-    private lazy var backImage: UIImageView = UIImageView(image: Asset.Assets.authDecor.image.withTintColor(Asset.Colors.backDecor.color))
+    // MARK: - UI elements
+    private lazy var nickTextField = uiFactory.createTextField(type: .default, placeholder: Strings.Title.nick)
+    private lazy var passTextField = uiFactory.createTextField(type: .default, placeholder: Strings.Title.pass)
+    private lazy var emailTextField = uiFactory.createTextField(type: .default, placeholder: Strings.Title.email)
+    private lazy var ageTextField = uiFactory.createTextField(type: .default, placeholder: Strings.Title.age)
 
-    private lazy var regButton = createDefaultButton(Strings.Button.auth, regAction)
-    private lazy var alreadyRegButton = createTextButton(Strings.Button.alreadyReg, alreadyRegAction)
+    private lazy var regButton = uiFactory.createButton(type: .default, action: regAction, title: Strings.Button.auth)
+    private lazy var alreadyRegButton = uiFactory.createButton(type: .text, action: alreadyRegAction, title: Strings.Button.alreadyReg)
+
+    private lazy var nickErrorsLabel = uiFactory.createLabel(type: .error)
+    private lazy var passErrorsLabel = uiFactory.createLabel(type: .error)
+    private lazy var emailErrorsLabel = uiFactory.createLabel(type: .error)
+    private lazy var ageErrorsLabel = uiFactory.createLabel(type: .error)
+
+    private lazy var backColor = Asset.Colors.backDecor.color
+    private lazy var image = Asset.Assets.authDecor.image.withTintColor(backColor)
+    private lazy var backImage = UIImageView(image: image)
 
     private var regAction: UIAction?
     private var alreadyRegAction: UIAction?
+
+    // MARK: - Variables
+    weak var delegate: SignUpViewDelegate?
 
     // MARK: - Init
     override init(frame: CGRect) {
@@ -38,6 +44,8 @@ class SignUpView: BaseView {
         configureRegAction()
         configureAlreadyRegAction()
         configureUI()
+        emailTextField.text = "missis.1220@mail.ru"
+        passTextField.text = "Evaklq1!!"
     }
 
     required init?(coder: NSCoder) {
@@ -45,27 +53,7 @@ class SignUpView: BaseView {
     }
 }
 
-// MARK: - Configure Actions
-extension SignUpView {
-    private func configureRegAction() {
-        let action = UIAction { [weak self] _ in
-            guard let self else { return }
-            let age = Int(self.ageTextField.text ?? "-1")
-            self.delegate?.didTapRegistrationButton(self.nickTextField.text, self.emailTextField.text, age, self.passTextField.text)
-        }
-        regAction = action
-    }
-
-    private func configureAlreadyRegAction() {
-        let action = UIAction { [weak self] _ in
-            guard let self else { return }
-            self.delegate?.didTapAlreadyRegistredButton(self.emailTextField.text, self.passTextField.text)
-        }
-        alreadyRegAction = action
-    }
-}
-
-// MARK: - Configure Mistakes
+// MARK: - Configure errors from controller
 extension SignUpView {
     func configureNickErrors(_ errors: String?) {
         nickErrorsLabel.isHidden = false
@@ -90,13 +78,33 @@ extension SignUpView {
         ageErrorsLabel.text = ""
     }
     func getAlert(_ mes: String) -> UIAlertController {
-        createErrorAlert(mes)
+        uiFactory.createAlert(type: .error, message: mes)
     }
 }
 
-// MARK: - Configure Constrains
-extension SignUpView {
-    private func configureUI() {
+// MARK: - Configure Actions
+private extension SignUpView {
+    func configureRegAction() {
+        let action = UIAction { [weak self] _ in
+            guard let self else { return }
+            let age = Int(self.ageTextField.text ?? "-1")
+            self.delegate?.didTapRegistrationButton(self.nickTextField.text, self.emailTextField.text, age, self.passTextField.text)
+        }
+        regAction = action
+    }
+
+    func configureAlreadyRegAction() {
+        let action = UIAction { [weak self] _ in
+            guard let self else { return }
+            self.delegate?.didTapAlreadyRegistredButton(self.emailTextField.text, self.passTextField.text)
+        }
+        alreadyRegAction = action
+    }
+}
+
+// MARK: - Configure UI
+private extension SignUpView {
+    func configureUI() {
         let backView = UIView()
         backView.addSubview(backImage)
         backView.backgroundColor = Asset.Colors.back.color

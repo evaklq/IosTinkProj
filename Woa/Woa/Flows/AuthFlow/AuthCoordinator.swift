@@ -9,9 +9,6 @@ import Foundation
 
 class AuthCoordinator: BaseCoordinator {
     var router: Router
-    private let authService = AuthService.shared
-    private let validationService = ValidationService.shared
-    private let dbService = FirestoreDbService.shared
 
     init(router: Router) {
         self.router = router
@@ -25,8 +22,8 @@ class AuthCoordinator: BaseCoordinator {
 // MARK: - Configure flows actions
 extension AuthCoordinator {
     private func showSignUpController() {
-        let signUpViewModel = SignUpViewModel(auth: authService, validation: validationService, dataBase: dbService)
-        let signUpController = SignUpViewController(viewModel: signUpViewModel)
+        let signUpController = controllerFactory.createSignUpController()
+
         signUpController.flowCompletionHandlerWithValue = { [weak self] info in
             let states = info.accountState
             switch states {
@@ -40,8 +37,8 @@ extension AuthCoordinator {
     }
 
     private func showLogInController(_ email: String?, _ pass: String?) {
-        let logInViewModel = LogInViewModel(authService: authService)
-        let logInController = LogInViewController(viewModel: logInViewModel, email: email, pass: pass)
+        let logInController = controllerFactory.createLogInController(email: email, pass: pass)
+
         logInController.flowCompletionHandler = { [weak self] in
             self?.flowCompletionHandler?()
         }

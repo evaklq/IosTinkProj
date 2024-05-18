@@ -20,7 +20,7 @@ class FamousArtsCoordinator: BaseCoordinator {
     }
 
     private func showFamousArtsController() {
-        let famousArtsController = FamousArtsViewController()
+        let famousArtsController = controllerFactory.createFamousArtsController()
         router.setRootController(famousArtsController)
     }
 }

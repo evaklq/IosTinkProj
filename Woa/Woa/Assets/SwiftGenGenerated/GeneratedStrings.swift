@@ -19,6 +19,8 @@ public enum Strings {
     public static let alreadyReg = Strings.tr("Localizable", "button.alreadyReg", fallback: "Already regregistered?")
     /// Start your trip
     public static let auth = Strings.tr("Localizable", "button.auth", fallback: "Start your trip")
+    /// Buy
+    public static let buy = Strings.tr("Localizable", "button.buy", fallback: "Buy")
   }
   public enum Error {
     ///  can't contain special characters
@@ -63,10 +65,18 @@ public enum Strings {
   public enum Title {
     /// Age
     public static let age = Strings.tr("Localizable", "title.age", fallback: "Age")
+    /// ArtObject
+    public static let artObject = Strings.tr("Localizable", "title.artObject", fallback: "ArtObject")
+    /// ₽ 
+    public static let cost = Strings.tr("Localizable", "title.cost", fallback: "₽ ")
     /// Email
     public static let email = Strings.tr("Localizable", "title.email", fallback: "Email")
+    /// Graphics
+    public static let graphics = Strings.tr("Localizable", "title.graphics", fallback: "Graphics")
     /// IconId
     public static let icon = Strings.tr("Localizable", "title.icon", fallback: "IconId")
+    /// Find your favorite art
+    public static let mainFindTextField = Strings.tr("Localizable", "title.mainFindTextField", fallback: "Find your favorite art")
     /// Localizable.strings
     ///   Woa
     /// 
@@ -74,6 +84,30 @@ public enum Strings {
     public static let nick = Strings.tr("Localizable", "title.nick", fallback: "Nick")
     /// Password
     public static let pass = Strings.tr("Localizable", "title.pass", fallback: "Password")
+    /// Photo
+    public static let photo = Strings.tr("Localizable", "title.photo", fallback: "Photo")
+    /// Picture
+    public static let picture = Strings.tr("Localizable", "title.picture", fallback: "Picture")
+    /// Popular art objects for sale
+    public static let popularArtObjects = Strings.tr("Localizable", "title.popularArtObjects", fallback: "Popular art objects for sale")
+    /// Popular arts
+    public static let popularArts = Strings.tr("Localizable", "title.popularArts", fallback: "Popular arts")
+    /// Popular graphics for sale
+    public static let popularGraphics = Strings.tr("Localizable", "title.popularGraphics", fallback: "Popular graphics for sale")
+    /// Popular photos for sale
+    public static let popularPhotos = Strings.tr("Localizable", "title.popularPhotos", fallback: "Popular photos for sale")
+    /// Popular pictures for sale
+    public static let popularPicteres = Strings.tr("Localizable", "title.popularPicteres", fallback: "Popular pictures for sale")
+    /// Popular sculptures for sale
+    public static let popularSculptures = Strings.tr("Localizable", "title.popularSculptures", fallback: "Popular sculptures for sale")
+    /// Sculpture
+    public static let sculpture = Strings.tr("Localizable", "title.sculpture", fallback: "Sculpture")
+    /// Your shopping cart
+    public static let shoppingCart = Strings.tr("Localizable", "title.shoppingCart", fallback: "Your shopping cart")
+    /// Welcome, 
+    public static let welcomeUser = Strings.tr("Localizable", "title.welcomeUser", fallback: "Welcome, ")
+    ///  year
+    public static let year = Strings.tr("Localizable", "title.year", fallback: " year")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

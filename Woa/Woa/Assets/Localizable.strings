@@ -12,10 +12,29 @@
 "title.email" = "Email";
 "title.age" = "Age";
 "title.icon" = "IconId";
+"title.year" = " year";
+"title.cost" = "₽ ";
+
+"title.picture" = "Picture";
+"title.sculpture" = "Sculpture";
+"title.photo" = "Photo";
+"title.graphics" = "Graphics";
+"title.artObject" = "ArtObject";
+"title.welcomeUser" = "Welcome, ";
+
+"title.mainFindTextField" = "Find your favorite art";
+"title.popularArts" = "Popular arts";
+"title.shoppingCart" = "Your shopping cart";
+"title.popularPicteres" = "Popular pictures for sale";
+"title.popularSculptures" = "Popular sculptures for sale";
+"title.popularPhotos" = "Popular photos for sale";
+"title.popularGraphics" = "Popular graphics for sale";
+"title.popularArtObjects" = "Popular art objects for sale";
 
 // MARK: - Buttons
 "button.auth" = "Start your trip";
 "button.alreadyReg" = "Already regregistered?";
+"button.buy" = "Buy";
 
 // MARK: - Firebase Services
 "firebase.folder.db" = "users";

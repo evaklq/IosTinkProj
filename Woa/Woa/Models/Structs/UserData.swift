@@ -15,6 +15,8 @@ struct UserData {
     var age: Int
     var iconURL: URL?
     var id: String
+    var likeArts: [Art]?
+    var cartArts: [Art]?
 
     /// For create user first time with password
     init(nick: String, email: String, password: String, age: Int, icon: URL? = nil) {
@@ -66,12 +68,4 @@ struct UserData {
 
         return data
     }
-
-    /*
-    /// Get inon in array format
-    var iconData: [String: Any] {
-        let data: [String: Any] = [Strings.icon: iconId ?? ""]
-        return data
-    }
-    */
 }

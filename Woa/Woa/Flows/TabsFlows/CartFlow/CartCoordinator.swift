@@ -20,7 +20,7 @@ class CartCoordinator: BaseCoordinator {
     }
 
     private func showCartController() {
-        let cartController = CartViewController()
+        let cartController = controllerFactory.createCartController()
         router.setRootController(cartController)
     }
 }
