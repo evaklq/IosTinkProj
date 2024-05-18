@@ -8,8 +8,8 @@
 import UIKit
 
 class Art {
-    var image: UIImage
-    var year: Int
+    var images: [UIImage]
+    var year: Int?
     var stringYear: String
     var name: String
     var type: ArtType
@@ -17,10 +17,10 @@ class Art {
     var isInCart: Bool
     var cost: String
 
-    init(type: ArtType, image: UIImage, name: String, year: Int, isLike: Bool = false, isInCart: Bool = false, cost: Double = 0) {
-        self.image = image
+    init(type: ArtType, images: [UIImage], name: String, year: Int?, isLike: Bool = false, isInCart: Bool = false, cost: Double = 0) {
+        self.images = images
         self.year = year
-        self.stringYear = year.description + Strings.Title.year
+        self.stringYear = (year?.description ?? "no ") + Strings.Title.year
         self.name = name
         self.type = type
         self.isLike = isLike
@@ -28,10 +28,10 @@ class Art {
         self.cost = Strings.Title.cost + cost.description
     }
 
-    init(type: ArtType, image: UIImage, name: String, year: Int, isLike: Bool = false, isInCart: Bool = false, cost: String = "") {
-        self.image = image
+    init(type: ArtType, images: [UIImage], name: String, year: Int?, isLike: Bool = false, isInCart: Bool = false, cost: String = "") {
+        self.images = images
         self.year = year
-        self.stringYear = year.description + Strings.Title.year
+        self.stringYear = (year?.description ?? "no ") + Strings.Title.year
         self.name = name
         self.type = type
         self.isLike = isLike

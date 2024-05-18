@@ -11,7 +11,7 @@ enum ArtType: String {
     case picture
     case sculpture
     case photo
-    case graphics
+    case graphic
     case artObject
 
     var description: String {
@@ -22,7 +22,7 @@ enum ArtType: String {
             return Strings.Title.sculpture
         case .photo:
             return Strings.Title.photo
-        case .graphics:
+        case .graphic:
             return Strings.Title.graphics
         case .artObject:
             return Strings.Title.artObject

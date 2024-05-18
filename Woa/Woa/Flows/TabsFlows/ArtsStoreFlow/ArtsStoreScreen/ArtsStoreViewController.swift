@@ -50,7 +50,13 @@ class ArtsStoreViewController: UIViewController, ControllerProtocol {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        artsStoreView.setCollectioViewsDataSource(picturesDataSourse, sculpturesDataSourse, photosDataSourse, graphicsDataSourse, artOdjectsDataSourse)
+        artsStoreView.setCollectioViewsDataSource(
+            picturesDataSourse,
+            sculpturesDataSourse,
+            photosDataSourse,
+            graphicsDataSourse,
+            artOdjectsDataSourse
+        )
         artsStoreView.reloadData()
     }
 }

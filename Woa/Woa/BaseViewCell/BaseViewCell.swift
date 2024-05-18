@@ -42,7 +42,7 @@ class BaseViewCell: UITableViewCell {
 
     // MARK: - Configure cell
     func configureCell(with art: Art) {
-        artImage.image = art.image
+        artImage.image = art.images.first
         infoLabel.text = art.stringYear
         nameLabel.text = art.name
         typeLabel.text = art.type.description

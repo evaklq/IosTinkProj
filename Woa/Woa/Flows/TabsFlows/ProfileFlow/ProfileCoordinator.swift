@@ -21,6 +21,33 @@ class ProfileCoordinator: BaseCoordinator {
 
     private func showProfileController() {
         let profileController = controllerFactory.createProfileController()
+
+        profileController.flowCompletionHandlerWithValue = { [weak self] info in
+            switch info {
+            case .changeProfile:
+                self?.showChangeProfileController()
+            case .userArts:
+                self?.showUserArtsController()
+            }
+        }
         router.setRootController(profileController)
+    }
+
+    private func showChangeProfileController() {
+        let changeProfileController = controllerFactory.createChangeProfileController()
+
+        changeProfileController.flowCompletionHandler = { [weak self] in
+            self?.flowCompletionHandler?()
+        }
+        router.push(changeProfileController, animated: true)
+    }
+
+    private func showUserArtsController() {
+        let userArtsController = controllerFactory.createUserArtsController()
+
+        userArtsController.flowCompletionHandler = { [weak self] in
+            self?.flowCompletionHandler?()
+        }
+        router.push(userArtsController, animated: true)
     }
 }

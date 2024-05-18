@@ -35,7 +35,7 @@ class ArtsStoreViewCell: UICollectionViewCell {
 
     // MARK: - Configure cell
     func configureCell(with art: Art) {
-        artImage.image = art.image
+        artImage.image = art.images[0]
         costLabel.text = art.cost
         titleLabel.text = art.name
     }

@@ -968,10 +968,6 @@ PODS:
   - gRPC-Core/Privacy (1.62.1)
   - GTMSessionFetcher/Core (3.3.2)
   - leveldb-library (1.22.4)
-  - Moya (15.0.0):
-    - Moya/Core (= 15.0.0)
-  - Moya/Core (15.0.0):
-    - Alamofire (~> 5.0)
   - nanopb (2.30910.0):
     - nanopb/decode (= 2.30910.0)
     - nanopb/encode (= 2.30910.0)
@@ -984,10 +980,10 @@ PODS:
   - SwiftLint (0.54.0)
 
 DEPENDENCIES:
+  - Alamofire
   - FirebaseAuth
   - FirebaseFirestore
   - FirebaseStorage
-  - Moya (~> 15.0)
   - SnapKit (~> 5.0.0)
   - SwiftGen
   - SwiftLint
@@ -1012,7 +1008,6 @@ SPEC REPOS:
     - gRPC-Core
     - GTMSessionFetcher
     - leveldb-library
-    - Moya
     - nanopb
     - PromisesObjC
     - RecaptchaInterop
@@ -1039,7 +1034,6 @@ SPEC CHECKSUMS:
   gRPC-Core: 6ec9002832e1e22c5bb8c54994b050b0ee4205c6
   GTMSessionFetcher: 0e876eea9782ec6462e91ab872711c357322c94f
   leveldb-library: 06a69cc7582d64b29424a63e085e683cc188230a
-  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   nanopb: 438bc412db1928dac798aa6fd75726007be04262
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
@@ -1047,6 +1041,6 @@ SPEC CHECKSUMS:
   SwiftGen: 4993cbf71cbc4886f775e26f8d5c3a1188ec9f99
   SwiftLint: c1de071d9d08c8aba837545f6254315bc900e211
 
-PODFILE CHECKSUM: d9c2eaef18ab94465e1c43aa92e9154a5aac75c5
+PODFILE CHECKSUM: 2d7344470f5b8ed6a2a3f1c81e7858e4fb5ecb6c
 
 COCOAPODS: 1.15.2

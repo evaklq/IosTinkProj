@@ -80,6 +80,22 @@
 		046D28EA2BAA4FF0004A9E2B /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D28E92BAA4FF0004A9E2B /* Typealiases.swift */; };
 		046D28EC2BAA52B1004A9E2B /* ControllerWithValueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D28EB2BAA52B1004A9E2B /* ControllerWithValueProtocol.swift */; };
 		046D28EE2BAA5A13004A9E2B /* UserAccountStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D28ED2BAA5A13004A9E2B /* UserAccountStatus.swift */; };
+		047402E62BEAD02B00B3EF44 /* UserDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047402E52BEAD02B00B3EF44 /* UserDto.swift */; };
+		047402E82BEAD0B800B3EF44 /* AuthorDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047402E72BEAD0B800B3EF44 /* AuthorDto.swift */; };
+		047402EA2BEAD13600B3EF44 /* UserRoleDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047402E92BEAD13600B3EF44 /* UserRoleDto.swift */; };
+		047402EC2BEAD31100B3EF44 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047402EB2BEAD31100B3EF44 /* NetworkError.swift */; };
+		047402EE2BEAD45E00B3EF44 /* LocationDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047402ED2BEAD45E00B3EF44 /* LocationDto.swift */; };
+		047402F02BEADF5500B3EF44 /* ArtDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047402EF2BEADF5500B3EF44 /* ArtDto.swift */; };
+		047402F22BEAE01E00B3EF44 /* ArtCategoryDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047402F12BEAE01E00B3EF44 /* ArtCategoryDto.swift */; };
+		047402F42BEAE05C00B3EF44 /* ImageDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047402F32BEAE05C00B3EF44 /* ImageDto.swift */; };
+		047402F62BEAE09300B3EF44 /* TagDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047402F52BEAE09300B3EF44 /* TagDto.swift */; };
+		047402F82BEB2CB200B3EF44 /* ProfileActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047402F72BEB2CB100B3EF44 /* ProfileActions.swift */; };
+		047402FC2BEB2E7200B3EF44 /* ChangeProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047402FB2BEB2E7200B3EF44 /* ChangeProfileViewController.swift */; };
+		047402FE2BEB2E8000B3EF44 /* ChangeProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047402FD2BEB2E8000B3EF44 /* ChangeProfileView.swift */; };
+		047403002BEB2E9000B3EF44 /* ChangeProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047402FF2BEB2E9000B3EF44 /* ChangeProfileViewModel.swift */; };
+		047403022BEB2F6800B3EF44 /* UserArtsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047403012BEB2F6800B3EF44 /* UserArtsViewController.swift */; };
+		047403042BEB2F7600B3EF44 /* UserArtsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047403032BEB2F7600B3EF44 /* UserArtsViewModel.swift */; };
+		047403062BEB2F8200B3EF44 /* UserArtsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047403052BEB2F8200B3EF44 /* UserArtsView.swift */; };
 		047563D42BAC5D4600BF3A16 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 047563D32BAC5D4600BF3A16 /* swiftgen.yml */; };
 		047563E92BAC800F00BF3A16 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047563E82BAC800F00BF3A16 /* BaseView.swift */; };
 		0491490B2BC2D1F500E2F79C /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0491490A2BC2D1F500E2F79C /* UserData.swift */; };
@@ -175,6 +191,22 @@
 		046D28E92BAA4FF0004A9E2B /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		046D28EB2BAA52B1004A9E2B /* ControllerWithValueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerWithValueProtocol.swift; sourceTree = "<group>"; };
 		046D28ED2BAA5A13004A9E2B /* UserAccountStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountStatus.swift; sourceTree = "<group>"; };
+		047402E52BEAD02B00B3EF44 /* UserDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDto.swift; sourceTree = "<group>"; };
+		047402E72BEAD0B800B3EF44 /* AuthorDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDto.swift; sourceTree = "<group>"; };
+		047402E92BEAD13600B3EF44 /* UserRoleDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleDto.swift; sourceTree = "<group>"; };
+		047402EB2BEAD31100B3EF44 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		047402ED2BEAD45E00B3EF44 /* LocationDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDto.swift; sourceTree = "<group>"; };
+		047402EF2BEADF5500B3EF44 /* ArtDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDto.swift; sourceTree = "<group>"; };
+		047402F12BEAE01E00B3EF44 /* ArtCategoryDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCategoryDto.swift; sourceTree = "<group>"; };
+		047402F32BEAE05C00B3EF44 /* ImageDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDto.swift; sourceTree = "<group>"; };
+		047402F52BEAE09300B3EF44 /* TagDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagDto.swift; sourceTree = "<group>"; };
+		047402F72BEB2CB100B3EF44 /* ProfileActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActions.swift; sourceTree = "<group>"; };
+		047402FB2BEB2E7200B3EF44 /* ChangeProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProfileViewController.swift; sourceTree = "<group>"; };
+		047402FD2BEB2E8000B3EF44 /* ChangeProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProfileView.swift; sourceTree = "<group>"; };
+		047402FF2BEB2E9000B3EF44 /* ChangeProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProfileViewModel.swift; sourceTree = "<group>"; };
+		047403012BEB2F6800B3EF44 /* UserArtsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserArtsViewController.swift; sourceTree = "<group>"; };
+		047403032BEB2F7600B3EF44 /* UserArtsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserArtsViewModel.swift; sourceTree = "<group>"; };
+		047403052BEB2F8200B3EF44 /* UserArtsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserArtsView.swift; sourceTree = "<group>"; };
 		047563D32BAC5D4600BF3A16 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		047563E82BAC800F00BF3A16 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseView.swift; path = ../../../../../BaseView.swift; sourceTree = "<group>"; };
 		0491490A2BC2D1F500E2F79C /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -325,6 +357,7 @@
 				046D28A32BAA0E41004A9E2B /* Router */,
 				0417BA3F2BCDF688001DE706 /* UIFactoriesMethods */,
 				046D28A02BAA0D17004A9E2B /* Factories */,
+				047402E42BEAD00F00B3EF44 /* Dtos */,
 				046D28AD2BAA255E004A9E2B /* Services */,
 				046D289D2BAA095C004A9E2B /* Models */,
 				046D28B22BAA29D0004A9E2B /* Flows */,
@@ -470,6 +503,8 @@
 			children = (
 				046D28DA2BAA336B004A9E2B /* ProfileCoordinator.swift */,
 				046D28DC2BAA336F004A9E2B /* ProfileScreen */,
+				047402FA2BEB2E2600B3EF44 /* ChangeProfileScreen */,
+				047402F92BEB2E1800B3EF44 /* UserArtsScreen */,
 			);
 			path = ProfileFlow;
 			sourceTree = "<group>";
@@ -566,6 +601,41 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		047402E42BEAD00F00B3EF44 /* Dtos */ = {
+			isa = PBXGroup;
+			children = (
+				047402E52BEAD02B00B3EF44 /* UserDto.swift */,
+				047402E72BEAD0B800B3EF44 /* AuthorDto.swift */,
+				047402E92BEAD13600B3EF44 /* UserRoleDto.swift */,
+				047402ED2BEAD45E00B3EF44 /* LocationDto.swift */,
+				047402EF2BEADF5500B3EF44 /* ArtDto.swift */,
+				047402F12BEAE01E00B3EF44 /* ArtCategoryDto.swift */,
+				047402F32BEAE05C00B3EF44 /* ImageDto.swift */,
+				047402F52BEAE09300B3EF44 /* TagDto.swift */,
+			);
+			path = Dtos;
+			sourceTree = "<group>";
+		};
+		047402F92BEB2E1800B3EF44 /* UserArtsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				047403012BEB2F6800B3EF44 /* UserArtsViewController.swift */,
+				047403032BEB2F7600B3EF44 /* UserArtsViewModel.swift */,
+				047403052BEB2F8200B3EF44 /* UserArtsView.swift */,
+			);
+			path = UserArtsScreen;
+			sourceTree = "<group>";
+		};
+		047402FA2BEB2E2600B3EF44 /* ChangeProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				047402FB2BEB2E7200B3EF44 /* ChangeProfileViewController.swift */,
+				047402FF2BEB2E9000B3EF44 /* ChangeProfileViewModel.swift */,
+				047402FD2BEB2E8000B3EF44 /* ChangeProfileView.swift */,
+			);
+			path = ChangeProfileScreen;
+			sourceTree = "<group>";
+		};
 		047563DE2BAC69BA00BF3A16 /* SwiftGenGenerated */ = {
 			isa = PBXGroup;
 			children = (
@@ -636,6 +706,8 @@
 				046D28ED2BAA5A13004A9E2B /* UserAccountStatus.swift */,
 				049149142BC33C1100E2F79C /* FirebaseError.swift */,
 				0417BAB12BD04F31001DE706 /* ArtType.swift */,
+				047402EB2BEAD31100B3EF44 /* NetworkError.swift */,
+				047402F72BEB2CB100B3EF44 /* ProfileActions.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -838,8 +910,12 @@
 				046D28D52BAA3331004A9E2B /* CartViewController.swift in Sources */,
 				046D28D92BAA3347004A9E2B /* CartView.swift in Sources */,
 				046D28D22BAA3310004A9E2B /* CartCoordinator.swift in Sources */,
+				047403022BEB2F6800B3EF44 /* UserArtsViewController.swift in Sources */,
 				046D28B12BAA258C004A9E2B /* ValidationService.swift in Sources */,
+				047403042BEB2F7600B3EF44 /* UserArtsViewModel.swift in Sources */,
+				047402EE2BEAD45E00B3EF44 /* LocationDto.swift in Sources */,
 				0417BA4D2BCDFC4B001DE706 /* LabelFactoryMethod.swift in Sources */,
+				047402FC2BEB2E7200B3EF44 /* ChangeProfileViewController.swift in Sources */,
 				046D289C2BAA0673004A9E2B /* CoordinatorProtocol.swift in Sources */,
 				046D28CC2BAA32A1004A9E2B /* ArtsStoreViewController.swift in Sources */,
 				046D289A2BA9FDBF004A9E2B /* AuthCoordinator.swift in Sources */,
@@ -857,14 +933,17 @@
 				046D289F2BAA0C17004A9E2B /* ContainerControllerType.swift in Sources */,
 				046D28A22BAA0D39004A9E2B /* CoordinatorFactoryProtocol.swift in Sources */,
 				04C998022BC6D6C500087BEC /* Observable.swift in Sources */,
+				047402EC2BEAD31100B3EF44 /* NetworkError.swift in Sources */,
 				0491491D2BC33D1A00E2F79C /* ValidationServiceProtocol.swift in Sources */,
 				042A97A02BE0DBDA0023FBBF /* CartDataSourse.swift in Sources */,
+				047402E82BEAD0B800B3EF44 /* AuthorDto.swift in Sources */,
 				049149152BC33C1100E2F79C /* FirebaseError.swift in Sources */,
 				0417BA452BCDF7CB001DE706 /* UIFactoryMethodProtocol.swift in Sources */,
 				0417BA3C2BCDEC5F001DE706 /* BaseViewCell.swift in Sources */,
 				046D28C92BAA3254004A9E2B /* ArtsStoreCoordinator.swift in Sources */,
 				046D28E72BAA4EF6004A9E2B /* ControllerProtocol.swift in Sources */,
 				0417BAB22BD04F31001DE706 /* ArtType.swift in Sources */,
+				047402F22BEAE01E00B3EF44 /* ArtCategoryDto.swift in Sources */,
 				0417BAB52BD08762001DE706 /* Like.swift in Sources */,
 				046D28C02BAA30D6004A9E2B /* FamousArtsViewController.swift in Sources */,
 				0417BA322BCDABB4001DE706 /* AuthUserProtocol.swift in Sources */,
@@ -872,10 +951,12 @@
 				0417BA392BCDD853001DE706 /* ControllerFactory.swift in Sources */,
 				0491490B2BC2D1F500E2F79C /* UserData.swift in Sources */,
 				0417BA572BCEA60C001DE706 /* UIFactoryMethod.swift in Sources */,
+				047402EA2BEAD13600B3EF44 /* UserRoleDto.swift in Sources */,
 				046D28EC2BAA52B1004A9E2B /* ControllerWithValueProtocol.swift in Sources */,
 				046D28BA2BAA2EFB004A9E2B /* TabBarCoordinator.swift in Sources */,
 				04B274482BAD7BA6009362F0 /* GeneratedStrings.swift in Sources */,
 				046D28A52BAA0E74004A9E2B /* RouterProtocol.swift in Sources */,
+				047402F42BEAE05C00B3EF44 /* ImageDto.swift in Sources */,
 				042A97A62BE29E1A0023FBBF /* PicturesDataSourse.swift in Sources */,
 				046D28982BA9FD67004A9E2B /* LogInViewModel.swift in Sources */,
 				0417BA512BCE0184001DE706 /* TextFieldFactoryMethod.swift in Sources */,
@@ -883,21 +964,27 @@
 				046D28BC2BAA2F25004A9E2B /* TabBarViewController.swift in Sources */,
 				0491491A2BC33CDE00E2F79C /* StorageService.swift in Sources */,
 				0417BA532BCEA50A001DE706 /* AlertFactoryMethodProtocol.swift in Sources */,
+				047402F82BEB2CB200B3EF44 /* ProfileActions.swift in Sources */,
 				049149112BC3066300E2F79C /* FirestoreDbServiceProtocol.swift in Sources */,
 				042A979E2BE0D2570023FBBF /* Cart.swift in Sources */,
 				046D28A72BAA0EAA004A9E2B /* Router.swift in Sources */,
 				042A97A42BE28B950023FBBF /* ArtsStoreViewCell.swift in Sources */,
 				046D28D02BAA32D7004A9E2B /* ArtsStoreView.swift in Sources */,
 				046D28C62BAA31AE004A9E2B /* FamousArtsViewModel.swift in Sources */,
+				047402E62BEAD02B00B3EF44 /* UserDto.swift in Sources */,
 				04B274462BAD7B9E009362F0 /* GeneratedAssets.swift in Sources */,
+				047402F62BEAE09300B3EF44 /* TagDto.swift in Sources */,
+				047403062BEB2F8200B3EF44 /* UserArtsView.swift in Sources */,
 				047563E92BAC800F00BF3A16 /* BaseView.swift in Sources */,
 				046D28912BA9FCDE004A9E2B /* SignUpViewModel.swift in Sources */,
+				047402F02BEADF5500B3EF44 /* ArtDto.swift in Sources */,
 				046D28AA2BAA1C95004A9E2B /* AppCoordinator.swift in Sources */,
 				0417BA4B2BCDFBED001DE706 /* LabelFactoryMethodProtocol.swift in Sources */,
 				046D28CE2BAA32B9004A9E2B /* ArtsStoreViewModel.swift in Sources */,
 				046D28EA2BAA4FF0004A9E2B /* Typealiases.swift in Sources */,
 				046D28BE2BAA2F44004A9E2B /* TabBarDelegateProtocol.swift in Sources */,
 				046D28E02BAA339B004A9E2B /* ProfileViewModel.swift in Sources */,
+				047402FE2BEB2E8000B3EF44 /* ChangeProfileView.swift in Sources */,
 				042A97A92BE29F3E0023FBBF /* SculpturesDataSourse.swift in Sources */,
 				042A97972BE070FB0023FBBF /* FamousArtsDataSourse.swift in Sources */,
 				045B077F2BA9729C000FAD08 /* AppDelegate.swift in Sources */,
@@ -905,6 +992,7 @@
 				0417BA472BCDF8AB001DE706 /* ButtonFactoryMethodProtocol.swift in Sources */,
 				042A97AB2BE29F790023FBBF /* PhotosDataSourse.swift in Sources */,
 				042A979C2BE0D1080023FBBF /* CartViewCell.swift in Sources */,
+				047403002BEB2E9000B3EF44 /* ChangeProfileViewModel.swift in Sources */,
 				045B07812BA9729C000FAD08 /* SceneDelegate.swift in Sources */,
 				046D28EE2BAA5A13004A9E2B /* UserAccountStatus.swift in Sources */,
 				046D28DE2BAA338B004A9E2B /* ProfileViewController.swift in Sources */,

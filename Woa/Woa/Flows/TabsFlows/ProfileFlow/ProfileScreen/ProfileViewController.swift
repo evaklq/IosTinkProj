@@ -7,7 +7,10 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, ControllerProtocol {
+class ProfileViewController: UIViewController, ControllerWithValueProtocol {
+    var flowCompletionHandlerWithValue: CompletionHandlerWithValue<ProfileActions>?
+    typealias ResultValue = ProfileActions
+
     // MARK: - Private constants
     private let viewModel: ProfileViewModel
     private let profileView: ProfileView
@@ -35,7 +38,19 @@ class ProfileViewController: UIViewController, ControllerProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        profileView.delegate = self
         edgesForExtendedLayout = .top
+    }
+}
+
+// MARK: - Custom Delegate SignUpView
+extension ProfileViewController: ProfileViewDelegate {
+    func didTapArtsLabel() {
+        viewModel.createArt()
+    }
+    
+    func didTapChangeProfileLabel() {
+        flowCompletionHandlerWithValue?(.changeProfile)
     }
 }
 
@@ -52,6 +67,10 @@ private extension ProfileViewController {
             guard let self, let image else { return }
 
             profileView.configureUserImage(image: image)
+        }
+
+        viewModel.update.bind { [weak self] (image) in
+            guard let self, let image else { return }
         }
     }
 }

@@ -17,7 +17,7 @@ class CartViewCell: BaseViewCell {
     }
 
     override func configureCell(with art: Art) {
-        artImage.image = art.image
+        artImage.image = art.images[0]
         infoLabel.text = art.cost
         nameLabel.text = art.name
         typeLabel.text = art.type.description

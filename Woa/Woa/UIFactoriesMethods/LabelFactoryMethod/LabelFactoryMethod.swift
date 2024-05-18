@@ -36,6 +36,7 @@ private extension LabelFactoryMethod {
     func createTitleLabel(_ text: String?, _ size: Int? = 20) -> UILabel {
         let color = Asset.Colors.general.color
         let label = createBaseLabel(text, color, weight: .bold, size: size ?? 20)
+        label.numberOfLines = 1
 
         return label
     }

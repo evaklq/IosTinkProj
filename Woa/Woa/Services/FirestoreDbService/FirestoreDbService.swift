@@ -60,14 +60,13 @@ private extension FirestoreDbService {
     /// Create object of UserData from firestore's array with data
     func arrayToUserData(_ data: [String: Any]?, _ userId: String) -> Result<UserData, FirebaseError> {
         guard let data = data else { return .failure(.documentDataError) }
-        guard case let .success(nick) = getString(data, "Strings.nick"),
-            case let .success(age) = getInt(data, "Strings.age"),
-            case let .success(email) = getString(data, "Strings.email"),
-            case let .success(iconUrl) = getUrl(data, "Strings.icon") else {
+        guard case let .success(nick) = getString(data, "Nick"),
+            case let .success(age) = getInt(data, "Age"),
+            case let .success(email) = getString(data, "Email") else {
             return .failure(.incorrectData)
         }
 
-        let userData = UserData(nick: nick, email: email, age: age, icon: iconUrl, id: userId)
+        let userData = UserData(nick: nick, email: email, age: age, icon: nil, id: userId)
         return .success(userData)
     }
 

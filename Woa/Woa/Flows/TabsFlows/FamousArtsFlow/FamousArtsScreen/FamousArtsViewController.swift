@@ -36,8 +36,11 @@ class FamousArtsViewController: UIViewController, ControllerProtocol {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        famousArtsView.setTableDataSource(famousArtsDataSourse)
-        famousArtsView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            famousArtsView.setTableDataSource(famousArtsDataSourse)
+            famousArtsView.reloadData()
+        }
     }
 }
 
@@ -49,8 +52,11 @@ private extension FamousArtsViewController {
             if arts.isEmpty {
                 return
             }
-            famousArtsDataSourse.updateArts(arts)
-            famousArtsView.reloadData()
+
+            DispatchQueue.main.async {
+                self.famousArtsDataSourse.updateArts(arts)
+                self.famousArtsView.reloadData()
+            }
         }
     }
 }

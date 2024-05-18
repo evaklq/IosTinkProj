@@ -96,7 +96,13 @@ extension ArtsStoreView {
 // MARK: - Configure collection views
 private extension ArtsStoreView {
     func configureCollectionViews() {
-        let collectionViews = [picturesCollectionView, sculpturesCollectionView, photosCollectionView, graphicsCollectionView, artsObjectsCollectionView]
+        let collectionViews = [
+            picturesCollectionView,
+            sculpturesCollectionView,
+            photosCollectionView,
+            graphicsCollectionView,
+            artsObjectsCollectionView
+        ]
 
         for collectionView in collectionViews {
             collectionView.register(ArtsStoreViewCell.self, forCellWithReuseIdentifier: ArtsStoreViewCell.reuseIdentifier)
@@ -167,7 +173,7 @@ private extension ArtsStoreView {
         picturesCollectionView.snp.makeConstraints { make in
             make.top.equalTo(picturesLabel.snp.bottom).offset(20)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(260)
+            make.height.equalTo(270)
         }
 
         sculpturesLabel.snp.makeConstraints { make in
