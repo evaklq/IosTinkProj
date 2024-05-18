@@ -63,4 +63,18 @@ final class ControllerFactory: ControllerFactoryProtocol {
 
         return controller
     }
+
+    func createChangeProfileController() -> ChangeProfileViewController {
+        let viewModel = ChangeProfileViewModel()
+        let controller = ChangeProfileViewController(viewModel: viewModel)
+
+        return controller
+    }
+
+    func createUserArtsController() -> UserArtsViewController {
+        let viewModel = UserArtsViewModel()
+        let controller = UserArtsViewController(viewModel: viewModel)
+
+        return controller
+    }
 }

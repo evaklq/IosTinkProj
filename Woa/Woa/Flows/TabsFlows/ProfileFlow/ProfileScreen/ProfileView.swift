@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol ProfileViewDelegate: AnyObject {
+    func didTapArtsLabel()
+    func didTapChangeProfileLabel()
+}
+
 class ProfileView: BaseView {
     // MARK: - UI elements
     private lazy var backImage = UIImageView()
@@ -14,9 +19,9 @@ class ProfileView: BaseView {
     private lazy var userNameLabel = uiFactory.createLabel(type: .title, text: Strings.Title.welcomeUser, size: 30)
     private lazy var userEmailLabel = uiFactory.createLabel(type: .default, text: Strings.Title.welcomeUser)
 
-    private lazy var userArtsLabel = uiFactory.createLabel(type: .default, text: Strings.Title.popularArts, size: 20)
+    private lazy var userArtsLabel = uiFactory.createLabel(type: .default, text: "Your arts", size: 20)
     private lazy var userPurchasesLabel = uiFactory.createLabel(type: .default, text: Strings.Title.popularArts, size: 20)
-    private lazy var changeProfileLabel = uiFactory.createLabel(type: .default, text: Strings.Title.popularArts, size: 20)
+    private lazy var changeProfileLabel = uiFactory.createLabel(type: .default, text: "Change profile", size: 20)
     private lazy var userFavoritesLabel = uiFactory.createLabel(type: .default, text: Strings.Title.popularArts, size: 20)
 
     private lazy var artsImage = UIImageView()
@@ -24,10 +29,23 @@ class ProfileView: BaseView {
     private lazy var changeProfileImage = UIImageView()
     private lazy var favoritesImage = UIImageView()
 
+    // MARK: - Variables
+    weak var delegate: ProfileViewDelegate?
+
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
+        userArtsLabel.isUserInteractionEnabled = true
+        changeProfileLabel.isUserInteractionEnabled = true
         configureUI()
+
+        let artsGesture = UITapGestureRecognizer(target: self, action: #selector(artsLabelTapped))
+        userArtsLabel.addGestureRecognizer(artsGesture)
+
+
+        let changeProfileGesture = UITapGestureRecognizer(target: self, action: #selector(changeProfileTapped))
+        changeProfileLabel.addGestureRecognizer(changeProfileGesture)
+
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -42,6 +60,14 @@ extension ProfileView {
 
     func configureUserImage(image: UIImage) {
         userImage.image = image
+    }
+
+    @objc func artsLabelTapped() {
+        delegate?.didTapArtsLabel()
+    }
+
+    @objc func changeProfileTapped() {
+        delegate?.didTapChangeProfileLabel()
     }
 }
 
@@ -73,11 +99,11 @@ private extension ProfileView {
         userInfoSV.spacing = 5
 
         let artsSV = UIStackView(arrangedSubviews: [userArtsLabel, artsImage])
-        let purchasesSV = UIStackView(arrangedSubviews: [userPurchasesLabel, purchasesImage])
-        let favoritesSV = UIStackView(arrangedSubviews: [userFavoritesLabel, favoritesImage])
+        // let purchasesSV = UIStackView(arrangedSubviews: [userPurchasesLabel, purchasesImage])
+        // let favoritesSV = UIStackView(arrangedSubviews: [userFavoritesLabel, favoritesImage])
         let changeProfileSV = UIStackView(arrangedSubviews: [changeProfileLabel, changeProfileImage])
 
-        let stackViews = [artsSV, purchasesSV, favoritesSV, changeProfileSV]
+        let stackViews = [artsSV, changeProfileSV]
 
         for stackView in stackViews {
             stackView.alignment = .fill
@@ -132,5 +158,3 @@ private extension ProfileView {
         }
     }
 }
-
-

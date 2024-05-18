@@ -83,7 +83,7 @@ private extension FamousArtsView {
         popularArtsTable.snp.makeConstraints { make in
             make.top.equalTo(popularArtsLabel.snp.bottom).offset(20)
             make.leading.trailing.equalToSuperview().inset(25)
-            make.bottom.equalToSuperview().offset(20)
+            make.bottom.equalToSuperview().inset(30)
         }
     }
 }

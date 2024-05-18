@@ -11,6 +11,7 @@ import FirebaseAuth
 final class AuthService: ReadOnlyAuthServiceProtocol {
     // MARK: - Declaration objects
     static let shared = AuthService()
+    private let networkService = NetworkService.shared
     var currentUser: AuthUserProtocol? {
         return auth.currentUser
     }
@@ -31,7 +32,23 @@ extension AuthService {
         }
         auth.createUser(withEmail: user.email, password: password) { result, error in
             if let result = result {
-                completion(.success(result.user))
+                self.networkService.registration(email: user.email, password: password) { resultLocal in
+                    switch resultLocal {
+                    case .success(let success):
+                        self.networkService.authorize(email: user.email, password: password) { resultLocal in
+                            switch resultLocal {
+                            case .success(let success):
+                                completion(.success(result.user))
+                                print("log cool")
+                            case .failure(let failure):
+                                print("log fail: " + failure.localizedDescription)
+                            }
+                        }
+                        print("reg cool")
+                    case .failure(let failure):
+                        print("reg fail: " + failure.localizedDescription)
+                    }
+                }
             } else if let error {
                 completion(.failure(error))
             }
@@ -45,7 +62,15 @@ extension AuthService {
         }
         auth.signIn(withEmail: user.email, password: password) { result, error in
             if let result = result {
-                completion(.success(result.user))
+                self.networkService.authorize(email: user.email, password: password) { resultLocal in
+                    switch resultLocal {
+                    case .success(let success):
+                        completion(.success(result.user))
+                        print("log cool")
+                    case .failure(let failure):
+                        print("log fail: " + failure.localizedDescription)
+                    }
+                }
             } else if let error = error {
                 completion(.failure(error))
             }
