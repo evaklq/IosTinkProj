@@ -1,0 +1,33 @@
+# 1
+input_dir: Woa/Assets
+# 2
+output_dir: Woa/Assets/SwiftGenGenerated/
+
+## XCAssets
+# 1
+xcassets:
+  # 2
+  inputs:
+    - Assets.xcassets
+    - Colors.xcassets
+  # 3
+  outputs:
+    # 4
+    templateName: swift5
+    # 5
+    output: GeneratedAssets.swift
+
+## Strings
+strings:
+  inputs:
+    # 1
+    - Localizable.strings
+  outputs:
+    - templateName: structured-swift5
+      # 2
+      params:
+        publicAccess: true
+        enumName: Strings
+      output: GeneratedStrings.swift
+
+
