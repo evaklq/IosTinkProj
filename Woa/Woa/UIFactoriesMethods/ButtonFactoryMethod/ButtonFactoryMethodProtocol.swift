@@ -8,9 +8,9 @@
 import UIKit
 
 enum ButtonType {
-    case `default`, text, like, cart
+    case `default`, text, like, cart, arcive
 }
 
 protocol ButtonFactoryMethodProtocol {
-    func createButton(type: ButtonType, action: UIAction?, title: String?, isLike: Bool?, isInCart: Bool?) -> UIButton
+    func createButton(type: ButtonType, action: UIAction?, title: String?, isLike: Bool?, isInCart: Bool?, isSelling: Bool?, isSelled: Bool?) -> UIButton
 }

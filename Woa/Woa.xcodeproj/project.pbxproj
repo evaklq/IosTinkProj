@@ -41,6 +41,35 @@
 		045B07832BA9729C000FAD08 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B07822BA9729C000FAD08 /* SignUpViewController.swift */; };
 		045B07882BA9729E000FAD08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045B07872BA9729E000FAD08 /* Assets.xcassets */; };
 		045B078B2BA9729E000FAD08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045B07892BA9729E000FAD08 /* LaunchScreen.storyboard */; };
+		04695BFF2BF90C3500DA17D2 /* UserArtsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695BFE2BF90C3500DA17D2 /* UserArtsCoordinator.swift */; };
+		04695C022BF9E61300DA17D2 /* SellingArtsDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695C012BF9E61300DA17D2 /* SellingArtsDataSourse.swift */; };
+		04695C042BF9E63200DA17D2 /* UserArtsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695C032BF9E63200DA17D2 /* UserArtsViewCell.swift */; };
+		04695C082BF9EAF800DA17D2 /* Selling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695C072BF9EAF800DA17D2 /* Selling.swift */; };
+		04695C0A2BF9F4F500DA17D2 /* ArchiveArtsDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695C092BF9F4F500DA17D2 /* ArchiveArtsDataSourse.swift */; };
+		04695C0E2BFE087600DA17D2 /* Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695C0D2BFE087600DA17D2 /* Edit.swift */; };
+		04695C112BFE0D6D00DA17D2 /* UserPurchasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695C102BFE0D6D00DA17D2 /* UserPurchasesView.swift */; };
+		04695C132BFE0D7B00DA17D2 /* UserPurchasesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695C122BFE0D7B00DA17D2 /* UserPurchasesViewModel.swift */; };
+		04695C152BFE0D8A00DA17D2 /* UserPurchasesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695C142BFE0D8A00DA17D2 /* UserPurchasesController.swift */; };
+		04695C182BFE0E5D00DA17D2 /* UserPurchasesDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695C172BFE0E5D00DA17D2 /* UserPurchasesDataSourse.swift */; };
+		04695C1A2BFE0E6800DA17D2 /* UserPurchasesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695C192BFE0E6800DA17D2 /* UserPurchasesViewCell.swift */; };
+		04695C1C2BFE133800DA17D2 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695C1B2BFE133800DA17D2 /* Order.swift */; };
+		04695C1E2BFE139000DA17D2 /* OrderStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695C1D2BFE139000DA17D2 /* OrderStatus.swift */; };
+		04695C222C00D81000DA17D2 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695C212C00D81000DA17D2 /* FavoritesView.swift */; };
+		04695C242C00D81E00DA17D2 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695C232C00D81E00DA17D2 /* FavoritesViewModel.swift */; };
+		04695C262C00D82D00DA17D2 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695C252C00D82D00DA17D2 /* FavoritesViewController.swift */; };
+		04695C282C00D8EA00DA17D2 /* FavoritesDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695C272C00D8EA00DA17D2 /* FavoritesDataSourse.swift */; };
+		04695C2C2C00E39900DA17D2 /* ArtCategoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695C2B2C00E39900DA17D2 /* ArtCategoryCoordinator.swift */; };
+		04695C2F2C00E3FB00DA17D2 /* ArtCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695C2E2C00E3FB00DA17D2 /* ArtCategoryViewController.swift */; };
+		04695C312C00E40A00DA17D2 /* ArtCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695C302C00E40A00DA17D2 /* ArtCategoryViewModel.swift */; };
+		04695C332C00E41700DA17D2 /* ArtCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695C322C00E41700DA17D2 /* ArtCategoryView.swift */; };
+		04695C362C020E8600DA17D2 /* ArtCategoryDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04695C352C020E8600DA17D2 /* ArtCategoryDataSourse.swift */; };
+		046C59CB2C0387BD002CDD02 /* DetailArtCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C59CA2C0387BD002CDD02 /* DetailArtCoordinator.swift */; };
+		046C59CE2C0387DC002CDD02 /* DetailArtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C59CD2C0387DC002CDD02 /* DetailArtView.swift */; };
+		046C59D02C0387EB002CDD02 /* DetailArtViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C59CF2C0387EB002CDD02 /* DetailArtViewModel.swift */; };
+		046C59D22C038803002CDD02 /* DetailArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C59D12C038803002CDD02 /* DetailArtViewController.swift */; };
+		046C59D92C0DFAE8002CDD02 /* FirstStartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C59D82C0DFAE8002CDD02 /* FirstStartController.swift */; };
+		046C59DB2C0DFAF6002CDD02 /* SecondStartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C59DA2C0DFAF6002CDD02 /* SecondStartController.swift */; };
+		046C59DD2C0DFB04002CDD02 /* ThirdStartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C59DC2C0DFB04002CDD02 /* ThirdStartController.swift */; };
 		046D288F2BA9FCAD004A9E2B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D288E2BA9FCAD004A9E2B /* SignUpView.swift */; };
 		046D28912BA9FCDE004A9E2B /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D28902BA9FCDE004A9E2B /* SignUpViewModel.swift */; };
 		046D28942BA9FD3C004A9E2B /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D28932BA9FD3C004A9E2B /* LogInView.swift */; };
@@ -152,6 +181,35 @@
 		045B07872BA9729E000FAD08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		045B078A2BA9729E000FAD08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		045B078C2BA9729E000FAD08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04695BFE2BF90C3500DA17D2 /* UserArtsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserArtsCoordinator.swift; sourceTree = "<group>"; };
+		04695C012BF9E61300DA17D2 /* SellingArtsDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellingArtsDataSourse.swift; sourceTree = "<group>"; };
+		04695C032BF9E63200DA17D2 /* UserArtsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserArtsViewCell.swift; sourceTree = "<group>"; };
+		04695C072BF9EAF800DA17D2 /* Selling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selling.swift; sourceTree = "<group>"; };
+		04695C092BF9F4F500DA17D2 /* ArchiveArtsDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveArtsDataSourse.swift; sourceTree = "<group>"; };
+		04695C0D2BFE087600DA17D2 /* Edit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edit.swift; sourceTree = "<group>"; };
+		04695C102BFE0D6D00DA17D2 /* UserPurchasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPurchasesView.swift; sourceTree = "<group>"; };
+		04695C122BFE0D7B00DA17D2 /* UserPurchasesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPurchasesViewModel.swift; sourceTree = "<group>"; };
+		04695C142BFE0D8A00DA17D2 /* UserPurchasesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPurchasesController.swift; sourceTree = "<group>"; };
+		04695C172BFE0E5D00DA17D2 /* UserPurchasesDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPurchasesDataSourse.swift; sourceTree = "<group>"; };
+		04695C192BFE0E6800DA17D2 /* UserPurchasesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPurchasesViewCell.swift; sourceTree = "<group>"; };
+		04695C1B2BFE133800DA17D2 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		04695C1D2BFE139000DA17D2 /* OrderStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStatus.swift; sourceTree = "<group>"; };
+		04695C212C00D81000DA17D2 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		04695C232C00D81E00DA17D2 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		04695C252C00D82D00DA17D2 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		04695C272C00D8EA00DA17D2 /* FavoritesDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesDataSourse.swift; sourceTree = "<group>"; };
+		04695C2B2C00E39900DA17D2 /* ArtCategoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCategoryCoordinator.swift; sourceTree = "<group>"; };
+		04695C2E2C00E3FB00DA17D2 /* ArtCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCategoryViewController.swift; sourceTree = "<group>"; };
+		04695C302C00E40A00DA17D2 /* ArtCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCategoryViewModel.swift; sourceTree = "<group>"; };
+		04695C322C00E41700DA17D2 /* ArtCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCategoryView.swift; sourceTree = "<group>"; };
+		04695C352C020E8600DA17D2 /* ArtCategoryDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCategoryDataSourse.swift; sourceTree = "<group>"; };
+		046C59CA2C0387BD002CDD02 /* DetailArtCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArtCoordinator.swift; sourceTree = "<group>"; };
+		046C59CD2C0387DC002CDD02 /* DetailArtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArtView.swift; sourceTree = "<group>"; };
+		046C59CF2C0387EB002CDD02 /* DetailArtViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArtViewModel.swift; sourceTree = "<group>"; };
+		046C59D12C038803002CDD02 /* DetailArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArtViewController.swift; sourceTree = "<group>"; };
+		046C59D82C0DFAE8002CDD02 /* FirstStartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStartController.swift; sourceTree = "<group>"; };
+		046C59DA2C0DFAF6002CDD02 /* SecondStartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStartController.swift; sourceTree = "<group>"; };
+		046C59DC2C0DFB04002CDD02 /* ThirdStartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdStartController.swift; sourceTree = "<group>"; };
 		046D288E2BA9FCAD004A9E2B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		046D28902BA9FCDE004A9E2B /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		046D28932BA9FD3C004A9E2B /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
@@ -306,12 +364,14 @@
 			path = AlertFactoryMethod;
 			sourceTree = "<group>";
 		};
-		0417BAB32BD0872E001DE706 /* Classes */ = {
+		0417BAB32BD0872E001DE706 /* BusinessModels */ = {
 			isa = PBXGroup;
 			children = (
 				0417BAAF2BD04EA3001DE706 /* Art.swift */,
+				04695C1B2BFE133800DA17D2 /* Order.swift */,
+				0491490A2BC2D1F500E2F79C /* UserData.swift */,
 			);
-			path = Classes;
+			path = BusinessModels;
 			sourceTree = "<group>";
 		};
 		042A97A72BE29EF90023FBBF /* DataSourses */ = {
@@ -379,12 +439,152 @@
 			path = AppInfo;
 			sourceTree = "<group>";
 		};
+		04695C002BF90C3C00DA17D2 /* UserArtsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				04695C0B2BF9F50200DA17D2 /* TableInfo */,
+				047403012BEB2F6800B3EF44 /* UserArtsViewController.swift */,
+				047403032BEB2F7600B3EF44 /* UserArtsViewModel.swift */,
+				047403052BEB2F8200B3EF44 /* UserArtsView.swift */,
+			);
+			path = UserArtsScreen;
+			sourceTree = "<group>";
+		};
+		04695C052BF9E93900DA17D2 /* ErrorModels */ = {
+			isa = PBXGroup;
+			children = (
+				049149142BC33C1100E2F79C /* FirebaseError.swift */,
+				047402EB2BEAD31100B3EF44 /* NetworkError.swift */,
+			);
+			path = ErrorModels;
+			sourceTree = "<group>";
+		};
+		04695C062BF9E94700DA17D2 /* CompletionModels */ = {
+			isa = PBXGroup;
+			children = (
+				047402F72BEB2CB100B3EF44 /* ProfileActions.swift */,
+				046D28ED2BAA5A13004A9E2B /* UserAccountStatus.swift */,
+				0417BA2F2BCDAA12001DE706 /* SignUpInfo.swift */,
+			);
+			path = CompletionModels;
+			sourceTree = "<group>";
+		};
+		04695C0B2BF9F50200DA17D2 /* TableInfo */ = {
+			isa = PBXGroup;
+			children = (
+				04695C012BF9E61300DA17D2 /* SellingArtsDataSourse.swift */,
+				04695C092BF9F4F500DA17D2 /* ArchiveArtsDataSourse.swift */,
+				04695C032BF9E63200DA17D2 /* UserArtsViewCell.swift */,
+			);
+			path = TableInfo;
+			sourceTree = "<group>";
+		};
+		04695C0C2BF9F52600DA17D2 /* TableInfo */ = {
+			isa = PBXGroup;
+			children = (
+				042A979F2BE0DBDA0023FBBF /* CartDataSourse.swift */,
+				042A979B2BE0D1080023FBBF /* CartViewCell.swift */,
+			);
+			path = TableInfo;
+			sourceTree = "<group>";
+		};
+		04695C0F2BFE0D0F00DA17D2 /* UserPurchasesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				04695C162BFE0E4400DA17D2 /* TableInfo */,
+				04695C142BFE0D8A00DA17D2 /* UserPurchasesController.swift */,
+				04695C122BFE0D7B00DA17D2 /* UserPurchasesViewModel.swift */,
+				04695C102BFE0D6D00DA17D2 /* UserPurchasesView.swift */,
+			);
+			path = UserPurchasesScreen;
+			sourceTree = "<group>";
+		};
+		04695C162BFE0E4400DA17D2 /* TableInfo */ = {
+			isa = PBXGroup;
+			children = (
+				04695C172BFE0E5D00DA17D2 /* UserPurchasesDataSourse.swift */,
+				04695C192BFE0E6800DA17D2 /* UserPurchasesViewCell.swift */,
+			);
+			path = TableInfo;
+			sourceTree = "<group>";
+		};
+		04695C1F2BFE151600DA17D2 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				0417BAB12BD04F31001DE706 /* ArtType.swift */,
+				04695C1D2BFE139000DA17D2 /* OrderStatus.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		04695C202C00D7DB00DA17D2 /* FavoritesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				04695C272C00D8EA00DA17D2 /* FavoritesDataSourse.swift */,
+				04695C252C00D82D00DA17D2 /* FavoritesViewController.swift */,
+				04695C232C00D81E00DA17D2 /* FavoritesViewModel.swift */,
+				04695C212C00D81000DA17D2 /* FavoritesView.swift */,
+			);
+			path = FavoritesScreen;
+			sourceTree = "<group>";
+		};
+		04695C292C00E28F00DA17D2 /* CollectionInfo */ = {
+			isa = PBXGroup;
+			children = (
+				042A97A32BE28B950023FBBF /* ArtsStoreViewCell.swift */,
+				042A97A72BE29EF90023FBBF /* DataSourses */,
+			);
+			path = CollectionInfo;
+			sourceTree = "<group>";
+		};
+		04695C2A2C00E32400DA17D2 /* ArtCategoryFlow */ = {
+			isa = PBXGroup;
+			children = (
+				04695C2B2C00E39900DA17D2 /* ArtCategoryCoordinator.swift */,
+				04695C2D2C00E3A400DA17D2 /* ArtCategoryScreen */,
+			);
+			path = ArtCategoryFlow;
+			sourceTree = "<group>";
+		};
+		04695C2D2C00E3A400DA17D2 /* ArtCategoryScreen */ = {
+			isa = PBXGroup;
+			children = (
+				04695C352C020E8600DA17D2 /* ArtCategoryDataSourse.swift */,
+				04695C2E2C00E3FB00DA17D2 /* ArtCategoryViewController.swift */,
+				04695C302C00E40A00DA17D2 /* ArtCategoryViewModel.swift */,
+				04695C322C00E41700DA17D2 /* ArtCategoryView.swift */,
+			);
+			path = ArtCategoryScreen;
+			sourceTree = "<group>";
+		};
+		046C59C92C038757002CDD02 /* DetailArtFlow */ = {
+			isa = PBXGroup;
+			children = (
+				046C59CA2C0387BD002CDD02 /* DetailArtCoordinator.swift */,
+				046C59CC2C0387C2002CDD02 /* DetailArtScreen */,
+			);
+			path = DetailArtFlow;
+			sourceTree = "<group>";
+		};
+		046C59CC2C0387C2002CDD02 /* DetailArtScreen */ = {
+			isa = PBXGroup;
+			children = (
+				046C59D12C038803002CDD02 /* DetailArtViewController.swift */,
+				046C59CF2C0387EB002CDD02 /* DetailArtViewModel.swift */,
+				046C59CD2C0387DC002CDD02 /* DetailArtView.swift */,
+			);
+			path = DetailArtScreen;
+			sourceTree = "<group>";
+		};
 		046D288C2BA9FC13004A9E2B /* AuthFlow */ = {
 			isa = PBXGroup;
 			children = (
 				046D28992BA9FDBF004A9E2B /* AuthCoordinator.swift */,
 				046D288D2BA9FC74004A9E2B /* SignUpScreen */,
 				046D28922BA9FD0A004A9E2B /* LogInScreen */,
+				046C59D82C0DFAE8002CDD02 /* FirstStartController.swift */,
+				046C59DA2C0DFAF6002CDD02 /* SecondStartController.swift */,
+				046C59DC2C0DFB04002CDD02 /* ThirdStartController.swift */,
 			);
 			path = AuthFlow;
 			sourceTree = "<group>";
@@ -412,9 +612,12 @@
 		046D289D2BAA095C004A9E2B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0417BAB32BD0872E001DE706 /* Classes */,
-				0491491E2BC33D4100E2F79C /* Enums */,
-				0491491F2BC33D5100E2F79C /* Structs */,
+				04695C1F2BFE151600DA17D2 /* Enums */,
+				0417BAB32BD0872E001DE706 /* BusinessModels */,
+				04695C062BF9E94700DA17D2 /* CompletionModels */,
+				0491491F2BC33D5100E2F79C /* BindingModels */,
+				04695C052BF9E93900DA17D2 /* ErrorModels */,
+				0491491E2BC33D4100E2F79C /* ControllerModels */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -461,6 +664,7 @@
 		046D28B22BAA29D0004A9E2B /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				046C59C92C038757002CDD02 /* DetailArtFlow */,
 				046D288C2BA9FC13004A9E2B /* AuthFlow */,
 				046D28B32BAA2A4D004A9E2B /* TabBarFlow */,
 				046D28B42BAA2A83004A9E2B /* TabsFlows */,
@@ -503,8 +707,10 @@
 			children = (
 				046D28DA2BAA336B004A9E2B /* ProfileCoordinator.swift */,
 				046D28DC2BAA336F004A9E2B /* ProfileScreen */,
+				04695C202C00D7DB00DA17D2 /* FavoritesScreen */,
 				047402FA2BEB2E2600B3EF44 /* ChangeProfileScreen */,
-				047402F92BEB2E1800B3EF44 /* UserArtsScreen */,
+				04695C0F2BFE0D0F00DA17D2 /* UserPurchasesScreen */,
+				047402F92BEB2E1800B3EF44 /* UserArtsFlow */,
 			);
 			path = ProfileFlow;
 			sourceTree = "<group>";
@@ -521,10 +727,10 @@
 		046D28B82BAA2B13004A9E2B /* ArtsStoreFlow */ = {
 			isa = PBXGroup;
 			children = (
-				042A97A72BE29EF90023FBBF /* DataSourses */,
 				046D28C82BAA3254004A9E2B /* ArtsStoreCoordinator.swift */,
-				042A97A32BE28B950023FBBF /* ArtsStoreViewCell.swift */,
+				04695C292C00E28F00DA17D2 /* CollectionInfo */,
 				046D28CA2BAA325A004A9E2B /* ArtsStoreScreen */,
+				04695C2A2C00E32400DA17D2 /* ArtCategoryFlow */,
 			);
 			path = ArtsStoreFlow;
 			sourceTree = "<group>";
@@ -553,8 +759,7 @@
 		046D28D32BAA3315004A9E2B /* CartScreen */ = {
 			isa = PBXGroup;
 			children = (
-				042A979F2BE0DBDA0023FBBF /* CartDataSourse.swift */,
-				042A979B2BE0D1080023FBBF /* CartViewCell.swift */,
+				04695C0C2BF9F52600DA17D2 /* TableInfo */,
 				046D28D42BAA3331004A9E2B /* CartViewController.swift */,
 				046D28D62BAA333D004A9E2B /* CartViewModel.swift */,
 				046D28D82BAA3347004A9E2B /* CartView.swift */,
@@ -616,14 +821,13 @@
 			path = Dtos;
 			sourceTree = "<group>";
 		};
-		047402F92BEB2E1800B3EF44 /* UserArtsScreen */ = {
+		047402F92BEB2E1800B3EF44 /* UserArtsFlow */ = {
 			isa = PBXGroup;
 			children = (
-				047403012BEB2F6800B3EF44 /* UserArtsViewController.swift */,
-				047403032BEB2F7600B3EF44 /* UserArtsViewModel.swift */,
-				047403052BEB2F8200B3EF44 /* UserArtsView.swift */,
+				04695BFE2BF90C3500DA17D2 /* UserArtsCoordinator.swift */,
+				04695C002BF90C3C00DA17D2 /* UserArtsScreen */,
 			);
-			path = UserArtsScreen;
+			path = UserArtsFlow;
 			sourceTree = "<group>";
 		};
 		047402FA2BEB2E2600B3EF44 /* ChangeProfileScreen */ = {
@@ -699,28 +903,23 @@
 			path = ValidationService;
 			sourceTree = "<group>";
 		};
-		0491491E2BC33D4100E2F79C /* Enums */ = {
+		0491491E2BC33D4100E2F79C /* ControllerModels */ = {
 			isa = PBXGroup;
 			children = (
 				046D289E2BAA0C17004A9E2B /* ContainerControllerType.swift */,
-				046D28ED2BAA5A13004A9E2B /* UserAccountStatus.swift */,
-				049149142BC33C1100E2F79C /* FirebaseError.swift */,
-				0417BAB12BD04F31001DE706 /* ArtType.swift */,
-				047402EB2BEAD31100B3EF44 /* NetworkError.swift */,
-				047402F72BEB2CB100B3EF44 /* ProfileActions.swift */,
 			);
-			path = Enums;
+			path = ControllerModels;
 			sourceTree = "<group>";
 		};
-		0491491F2BC33D5100E2F79C /* Structs */ = {
+		0491491F2BC33D5100E2F79C /* BindingModels */ = {
 			isa = PBXGroup;
 			children = (
-				0491490A2BC2D1F500E2F79C /* UserData.swift */,
-				0417BA2F2BCDAA12001DE706 /* SignUpInfo.swift */,
 				0417BAB42BD08762001DE706 /* Like.swift */,
 				042A979D2BE0D2570023FBBF /* Cart.swift */,
+				04695C072BF9EAF800DA17D2 /* Selling.swift */,
+				04695C0D2BFE087600DA17D2 /* Edit.swift */,
 			);
-			path = Structs;
+			path = BindingModels;
 			sourceTree = "<group>";
 		};
 		2564C9B40D82D47962C8B678 /* Pods */ = {
@@ -900,6 +1099,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				046D28C22BAA30EB004A9E2B /* FamousArtsView.swift in Sources */,
+				046C59CB2C0387BD002CDD02 /* DetailArtCoordinator.swift in Sources */,
 				046D288F2BA9FCAD004A9E2B /* SignUpView.swift in Sources */,
 				045B07832BA9729C000FAD08 /* SignUpViewController.swift in Sources */,
 				0417BA302BCDAA12001DE706 /* SignUpInfo.swift in Sources */,
@@ -911,35 +1111,50 @@
 				046D28D92BAA3347004A9E2B /* CartView.swift in Sources */,
 				046D28D22BAA3310004A9E2B /* CartCoordinator.swift in Sources */,
 				047403022BEB2F6800B3EF44 /* UserArtsViewController.swift in Sources */,
+				04695C1E2BFE139000DA17D2 /* OrderStatus.swift in Sources */,
 				046D28B12BAA258C004A9E2B /* ValidationService.swift in Sources */,
 				047403042BEB2F7600B3EF44 /* UserArtsViewModel.swift in Sources */,
+				04695C1A2BFE0E6800DA17D2 /* UserPurchasesViewCell.swift in Sources */,
 				047402EE2BEAD45E00B3EF44 /* LocationDto.swift in Sources */,
 				0417BA4D2BCDFC4B001DE706 /* LabelFactoryMethod.swift in Sources */,
+				04695C242C00D81E00DA17D2 /* FavoritesViewModel.swift in Sources */,
 				047402FC2BEB2E7200B3EF44 /* ChangeProfileViewController.swift in Sources */,
 				046D289C2BAA0673004A9E2B /* CoordinatorProtocol.swift in Sources */,
 				046D28CC2BAA32A1004A9E2B /* ArtsStoreViewController.swift in Sources */,
 				046D289A2BA9FDBF004A9E2B /* AuthCoordinator.swift in Sources */,
 				0417BA552BCEA582001DE706 /* AlertFactoryMethod.swift in Sources */,
+				04695C0A2BF9F4F500DA17D2 /* ArchiveArtsDataSourse.swift in Sources */,
 				042A97AD2BE29F980023FBBF /* GraphicsDataSourse.swift in Sources */,
+				04695C282C00D8EA00DA17D2 /* FavoritesDataSourse.swift in Sources */,
 				0417BAB02BD04EA4001DE706 /* Art.swift in Sources */,
 				04E4457D2BE4CF6A00AAB806 /* NetworkService.swift in Sources */,
 				046D28942BA9FD3C004A9E2B /* LogInView.swift in Sources */,
 				049149182BC33CC500E2F79C /* StorageServiceProtocol.swift in Sources */,
+				046C59CE2C0387DC002CDD02 /* DetailArtView.swift in Sources */,
+				046C59D02C0387EB002CDD02 /* DetailArtViewModel.swift in Sources */,
+				046C59DD2C0DFB04002CDD02 /* ThirdStartController.swift in Sources */,
 				042A97AF2BE29FC50023FBBF /* ArtObjectsDataSourse.swift in Sources */,
 				0417BA492BCDF9DE001DE706 /* ButtonFactoryMethod.swift in Sources */,
+				04695C132BFE0D7B00DA17D2 /* UserPurchasesViewModel.swift in Sources */,
 				0491490D2BC2DF4000E2F79C /* AuthServiceProtocol.swift in Sources */,
 				046D28E42BAA3E00004A9E2B /* BaseCoordinator.swift in Sources */,
 				049149132BC3114900E2F79C /* FirestoreDbService.swift in Sources */,
 				046D289F2BAA0C17004A9E2B /* ContainerControllerType.swift in Sources */,
+				04695C182BFE0E5D00DA17D2 /* UserPurchasesDataSourse.swift in Sources */,
 				046D28A22BAA0D39004A9E2B /* CoordinatorFactoryProtocol.swift in Sources */,
 				04C998022BC6D6C500087BEC /* Observable.swift in Sources */,
 				047402EC2BEAD31100B3EF44 /* NetworkError.swift in Sources */,
 				0491491D2BC33D1A00E2F79C /* ValidationServiceProtocol.swift in Sources */,
 				042A97A02BE0DBDA0023FBBF /* CartDataSourse.swift in Sources */,
+				04695C262C00D82D00DA17D2 /* FavoritesViewController.swift in Sources */,
+				04695C112BFE0D6D00DA17D2 /* UserPurchasesView.swift in Sources */,
 				047402E82BEAD0B800B3EF44 /* AuthorDto.swift in Sources */,
+				04695C2C2C00E39900DA17D2 /* ArtCategoryCoordinator.swift in Sources */,
 				049149152BC33C1100E2F79C /* FirebaseError.swift in Sources */,
 				0417BA452BCDF7CB001DE706 /* UIFactoryMethodProtocol.swift in Sources */,
 				0417BA3C2BCDEC5F001DE706 /* BaseViewCell.swift in Sources */,
+				04695C082BF9EAF800DA17D2 /* Selling.swift in Sources */,
+				04695C152BFE0D8A00DA17D2 /* UserPurchasesController.swift in Sources */,
 				046D28C92BAA3254004A9E2B /* ArtsStoreCoordinator.swift in Sources */,
 				046D28E72BAA4EF6004A9E2B /* ControllerProtocol.swift in Sources */,
 				0417BAB22BD04F31001DE706 /* ArtType.swift in Sources */,
@@ -947,17 +1162,22 @@
 				0417BAB52BD08762001DE706 /* Like.swift in Sources */,
 				046D28C02BAA30D6004A9E2B /* FamousArtsViewController.swift in Sources */,
 				0417BA322BCDABB4001DE706 /* AuthUserProtocol.swift in Sources */,
+				046C59D22C038803002CDD02 /* DetailArtViewController.swift in Sources */,
 				046D28962BA9FD53004A9E2B /* LogInViewController.swift in Sources */,
 				0417BA392BCDD853001DE706 /* ControllerFactory.swift in Sources */,
 				0491490B2BC2D1F500E2F79C /* UserData.swift in Sources */,
+				04695C0E2BFE087600DA17D2 /* Edit.swift in Sources */,
 				0417BA572BCEA60C001DE706 /* UIFactoryMethod.swift in Sources */,
 				047402EA2BEAD13600B3EF44 /* UserRoleDto.swift in Sources */,
 				046D28EC2BAA52B1004A9E2B /* ControllerWithValueProtocol.swift in Sources */,
 				046D28BA2BAA2EFB004A9E2B /* TabBarCoordinator.swift in Sources */,
+				04695C312C00E40A00DA17D2 /* ArtCategoryViewModel.swift in Sources */,
 				04B274482BAD7BA6009362F0 /* GeneratedStrings.swift in Sources */,
 				046D28A52BAA0E74004A9E2B /* RouterProtocol.swift in Sources */,
 				047402F42BEAE05C00B3EF44 /* ImageDto.swift in Sources */,
+				046C59DB2C0DFAF6002CDD02 /* SecondStartController.swift in Sources */,
 				042A97A62BE29E1A0023FBBF /* PicturesDataSourse.swift in Sources */,
+				04695C042BF9E63200DA17D2 /* UserArtsViewCell.swift in Sources */,
 				046D28982BA9FD67004A9E2B /* LogInViewModel.swift in Sources */,
 				0417BA512BCE0184001DE706 /* TextFieldFactoryMethod.swift in Sources */,
 				0417BA372BCDD7F1001DE706 /* ControllerFactoryProtocol.swift in Sources */,
@@ -973,13 +1193,17 @@
 				046D28C62BAA31AE004A9E2B /* FamousArtsViewModel.swift in Sources */,
 				047402E62BEAD02B00B3EF44 /* UserDto.swift in Sources */,
 				04B274462BAD7B9E009362F0 /* GeneratedAssets.swift in Sources */,
+				04695C222C00D81000DA17D2 /* FavoritesView.swift in Sources */,
 				047402F62BEAE09300B3EF44 /* TagDto.swift in Sources */,
 				047403062BEB2F8200B3EF44 /* UserArtsView.swift in Sources */,
 				047563E92BAC800F00BF3A16 /* BaseView.swift in Sources */,
+				04695C2F2C00E3FB00DA17D2 /* ArtCategoryViewController.swift in Sources */,
 				046D28912BA9FCDE004A9E2B /* SignUpViewModel.swift in Sources */,
 				047402F02BEADF5500B3EF44 /* ArtDto.swift in Sources */,
+				04695C022BF9E61300DA17D2 /* SellingArtsDataSourse.swift in Sources */,
 				046D28AA2BAA1C95004A9E2B /* AppCoordinator.swift in Sources */,
 				0417BA4B2BCDFBED001DE706 /* LabelFactoryMethodProtocol.swift in Sources */,
+				04695BFF2BF90C3500DA17D2 /* UserArtsCoordinator.swift in Sources */,
 				046D28CE2BAA32B9004A9E2B /* ArtsStoreViewModel.swift in Sources */,
 				046D28EA2BAA4FF0004A9E2B /* Typealiases.swift in Sources */,
 				046D28BE2BAA2F44004A9E2B /* TabBarDelegateProtocol.swift in Sources */,
@@ -992,12 +1216,16 @@
 				0417BA472BCDF8AB001DE706 /* ButtonFactoryMethodProtocol.swift in Sources */,
 				042A97AB2BE29F790023FBBF /* PhotosDataSourse.swift in Sources */,
 				042A979C2BE0D1080023FBBF /* CartViewCell.swift in Sources */,
+				04695C362C020E8600DA17D2 /* ArtCategoryDataSourse.swift in Sources */,
+				04695C332C00E41700DA17D2 /* ArtCategoryView.swift in Sources */,
 				047403002BEB2E9000B3EF44 /* ChangeProfileViewModel.swift in Sources */,
+				04695C1C2BFE133800DA17D2 /* Order.swift in Sources */,
 				045B07812BA9729C000FAD08 /* SceneDelegate.swift in Sources */,
 				046D28EE2BAA5A13004A9E2B /* UserAccountStatus.swift in Sources */,
 				046D28DE2BAA338B004A9E2B /* ProfileViewController.swift in Sources */,
 				046D28AC2BAA1D24004A9E2B /* CoordinatorFactory.swift in Sources */,
 				046D28C42BAA3133004A9E2B /* FamousArtsCoordinator.swift in Sources */,
+				046C59D92C0DFAE8002CDD02 /* FirstStartController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,4 +29,10 @@ final class CoordinatorFactory: CoordinatorFactoryProtocol {
     func createProfileCoordinator(router: Router) -> ProfileCoordinator {
         ProfileCoordinator(router: router)
     }
+    func createUserArtsCoordinator(router: Router) -> UserArtsCoordinator {
+        UserArtsCoordinator(router: router)
+    }
+    func createArtCategoryCoordinator(router: Router, type: ArtType) -> ArtCategoryCoordinator {
+        ArtCategoryCoordinator(router: router, type: type)
+    }
 }

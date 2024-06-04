@@ -104,8 +104,8 @@ public enum Strings {
     public static let sculpture = Strings.tr("Localizable", "title.sculpture", fallback: "Sculpture")
     /// Your shopping cart
     public static let shoppingCart = Strings.tr("Localizable", "title.shoppingCart", fallback: "Your shopping cart")
-    /// Welcome, 
-    public static let welcomeUser = Strings.tr("Localizable", "title.welcomeUser", fallback: "Welcome, ")
+    /// Welcome, Evaklq
+    public static let welcomeUser = Strings.tr("Localizable", "title.welcomeUser", fallback: "Welcome, Evaklq")
     ///  year
     public static let year = Strings.tr("Localizable", "title.year", fallback: " year")
   }

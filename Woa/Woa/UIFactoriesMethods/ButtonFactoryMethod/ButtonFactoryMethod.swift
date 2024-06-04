@@ -8,7 +8,7 @@
 import UIKit
 
 final class ButtonFactoryMethod: ButtonFactoryMethodProtocol {
-    func createButton(type: ButtonType, action: UIAction?, title: String?, isLike: Bool?, isInCart: Bool?) -> UIButton {
+    func createButton(type: ButtonType, action: UIAction?, title: String?, isLike: Bool?, isInCart: Bool?, isSelling: Bool?, isSelled: Bool?) -> UIButton {
         switch type {
         case .default:
             createDefaultButton(title, action)
@@ -18,6 +18,8 @@ final class ButtonFactoryMethod: ButtonFactoryMethodProtocol {
             createLikeButton(action, isLike)
         case .cart:
             createCartButton(action, isInCart)
+        case .arcive:
+            createArchiveButton(action, isSelling, isSelled)
         }
     }
 }
@@ -65,6 +67,33 @@ private extension ButtonFactoryMethod {
             button.isSelected = isInCart
         } else {
             button.isSelected = false
+        }
+
+        return button
+    }
+
+    func createArchiveButton(_ action: UIAction?, _ isSelling: Bool?, _ isSelled: Bool?) -> UIButton {
+        let button = UIButton()
+        let imageUnselected = Asset.Assets.unarchive.image
+        let imageSelected = Asset.Assets.archive.image
+
+        if !(isSelled ?? true) {
+            guard let action else { return button }
+            button.addAction(action, for: .touchUpInside)
+            button.setImage(imageUnselected, for: .normal)
+            button.setImage(imageSelected, for: .selected)
+
+            if let isSelling = isSelling {
+                button.isSelected = isSelling
+            } else {
+                button.isSelected = false
+            }
+        } else {
+            button.setTitle("Sell", for: .normal)
+            button.backgroundColor = UIColor.clear
+            button.layer.borderColor = Asset.Colors.general.color.cgColor
+            button.setTitleColor(Asset.Colors.profileItems.color, for: .normal)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(20), weight: .bold)
         }
 
         return button

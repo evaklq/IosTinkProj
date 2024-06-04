@@ -27,7 +27,11 @@ class ProfileCoordinator: BaseCoordinator {
             case .changeProfile:
                 self?.showChangeProfileController()
             case .userArts:
-                self?.showUserArtsController()
+                self?.showUserArtsFlow()
+            case .purchases:
+                self?.showUserPurchasesController()
+            case .favorites:
+                self?.showFavoritesController()
             }
         }
         router.setRootController(profileController)
@@ -39,15 +43,37 @@ class ProfileCoordinator: BaseCoordinator {
         changeProfileController.flowCompletionHandler = { [weak self] in
             self?.flowCompletionHandler?()
         }
+        router.dismiss(animated: false)
         router.push(changeProfileController, animated: true)
     }
 
-    private func showUserArtsController() {
-        let userArtsController = controllerFactory.createUserArtsController()
+    private func showUserPurchasesController() {
+        let userPurchasesController = controllerFactory.createUserPurchasesController()
 
-        userArtsController.flowCompletionHandler = { [weak self] in
+        userPurchasesController.flowCompletionHandler = { [weak self] in
             self?.flowCompletionHandler?()
         }
-        router.push(userArtsController, animated: true)
+        router.dismiss(animated: false)
+        router.push(userPurchasesController, animated: true)
+    }
+
+    private func showFavoritesController() {
+        let favoritesController = controllerFactory.createFavoritesController()
+
+        favoritesController.flowCompletionHandler = { [weak self] in
+            self?.flowCompletionHandler?()
+        }
+        router.dismiss(animated: false)
+        router.push(favoritesController, animated: true)
+    }
+
+    private func showUserArtsFlow() {
+        let userArtsCoordinator = coordinatorFactory.createUserArtsCoordinator(router: router)
+        addDependency(userArtsCoordinator)
+        userArtsCoordinator.flowCompletionHandler = { [weak self, userArtsCoordinator] in
+            self?.removeDependency(userArtsCoordinator)
+        }
+
+        userArtsCoordinator.start()
     }
 }

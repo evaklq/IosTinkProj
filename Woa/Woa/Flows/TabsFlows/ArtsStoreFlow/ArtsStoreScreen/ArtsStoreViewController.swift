@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ArtsStoreViewController: UIViewController, ControllerProtocol {
+class ArtsStoreViewController: UIViewController, ControllerWithValueProtocol {
+    typealias ResultValue = ArtType
+
     // MARK: - Private constants
     private let viewModel: ArtsStoreViewModel
     private let artsStoreView: ArtsStoreView
@@ -18,7 +20,7 @@ class ArtsStoreViewController: UIViewController, ControllerProtocol {
     private let artOdjectsDataSourse: ArtObjectsDataSourse
 
     // MARK: - Variables
-    var flowCompletionHandler: CompletionHandler?
+    var flowCompletionHandlerWithValue: CompletionHandlerWithValue<ArtType>?
 
     // MARK: - Init
     init(viewModel: ArtsStoreViewModel) {
@@ -40,6 +42,7 @@ class ArtsStoreViewController: UIViewController, ControllerProtocol {
     // MARK: - Load view
     override func loadView() {
         view = artsStoreView
+        artsStoreView.delegate = self
         setupBindings()
     }
 
@@ -58,6 +61,24 @@ class ArtsStoreViewController: UIViewController, ControllerProtocol {
             artOdjectsDataSourse
         )
         artsStoreView.reloadData()
+    }
+}
+
+extension ArtsStoreViewController: ArtsStoreViewDelegate {
+    func didTapPicturesLabel() {
+        flowCompletionHandlerWithValue?(.picture)
+    }
+    func didTapSculpturesLabel() {
+        flowCompletionHandlerWithValue?(.sculpture)
+    }
+    func didTapPhotosLabel() {
+        flowCompletionHandlerWithValue?(.photo)
+    }
+    func didTapArtObjectsLabel() {
+        flowCompletionHandlerWithValue?(.artObject)
+    }
+    func didTapGraphicsLabel() {
+        flowCompletionHandlerWithValue?(.graphic)
     }
 }
 

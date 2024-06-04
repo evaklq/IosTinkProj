@@ -30,7 +30,7 @@ extension AppCoordinator {
     private func runAuthFlow() {
         let authFlowCoordinator = coordinatorFactory.createAuthCoordinator(router: router)
         addDependency(authFlowCoordinator)
-        authFlowCoordinator.flowCompletionHandler = { [weak self] in
+        authFlowCoordinator.flowCompletionHandler = { [weak self, authFlowCoordinator] in
             self?.runTabBarFlow()
             self?.removeDependency(authFlowCoordinator)
         }
@@ -41,7 +41,7 @@ extension AppCoordinator {
         let tabBarViewController = TabBarViewController()
         let tabBarCoordinator = coordinatorFactory.createTabBarCoordinator(controller: tabBarViewController)
         addDependency(tabBarCoordinator)
-        tabBarCoordinator.flowCompletionHandler = { [weak self] in
+        tabBarCoordinator.flowCompletionHandler = { [weak self, tabBarCoordinator] in
             self?.removeDependency(tabBarCoordinator)
         }
         router.setRootController(tabBarViewController, isNavigationBarHidden: false)

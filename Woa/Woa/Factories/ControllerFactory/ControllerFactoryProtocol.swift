@@ -16,4 +16,8 @@ protocol ControllerFactoryProtocol {
     func createProfileController() -> ProfileViewController
     func createChangeProfileController() -> ChangeProfileViewController
     func createUserArtsController() -> UserArtsViewController
+    func createUserPurchasesController() -> UserPurchasesController
+    func createFavoritesController() -> FavoritesViewController
+    func createArtCategoryController(type: ArtType) -> ArtCategoryViewController
+    func createDetailArtController(art: Art) -> DetailArtViewController
 }

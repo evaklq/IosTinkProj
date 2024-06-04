@@ -7,7 +7,18 @@
 
 import UIKit
 
+protocol ArtsStoreViewDelegate: AnyObject {
+    func didTapPicturesLabel()
+    func didTapSculpturesLabel()
+    func didTapPhotosLabel()
+    func didTapArtObjectsLabel()
+    func didTapGraphicsLabel()
+}
+
 class ArtsStoreView: BaseView {
+    // MARK: - Variables
+    weak var delegate: ArtsStoreViewDelegate?
+
     // MARK: - UI elements
     private lazy var wecomeUserLabel = uiFactory.createLabel(type: .default, text: Strings.Title.welcomeUser)
     private lazy var searchArtTextField = uiFactory.createTextField(type: .search, placeholder: Strings.Title.mainFindTextField, action: searchAction)
@@ -32,6 +43,27 @@ class ArtsStoreView: BaseView {
         configureSearchAction()
         configureCollectionViews()
         configureUI()
+
+        picturesLabel.isUserInteractionEnabled = true
+        sculpturesLabel.isUserInteractionEnabled = true
+        photosLabel.isUserInteractionEnabled = true
+        graphicsLabel.isUserInteractionEnabled = true
+        artsObjectsLabel.isUserInteractionEnabled = true
+
+        let picturesGesture = UITapGestureRecognizer(target: self, action: #selector(picturesLabelTapped))
+        picturesLabel.addGestureRecognizer(picturesGesture)
+
+        let sculpturesGesture = UITapGestureRecognizer(target: self, action: #selector(sculpturesLabelTapped))
+        sculpturesLabel.addGestureRecognizer(sculpturesGesture)
+
+        let photosGesture = UITapGestureRecognizer(target: self, action: #selector(photosLabelTapped))
+        photosLabel.addGestureRecognizer(photosGesture)
+
+        let graphicsGesture = UITapGestureRecognizer(target: self, action: #selector(graphicsLabelTapped))
+        graphicsLabel.addGestureRecognizer(graphicsGesture)
+
+        let artsObjectsGesture = UITapGestureRecognizer(target: self, action: #selector(artObjectsLabelTapped))
+        artsObjectsLabel.addGestureRecognizer(artsObjectsGesture)
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -90,6 +122,26 @@ extension ArtsStoreView {
         DispatchQueue.main.async {
             self.artsObjectsCollectionView.reloadData()
         }
+    }
+
+    @objc func picturesLabelTapped() {
+        delegate?.didTapPicturesLabel()
+    }
+
+    @objc func sculpturesLabelTapped() {
+        delegate?.didTapSculpturesLabel()
+    }
+
+    @objc func photosLabelTapped() {
+        delegate?.didTapPhotosLabel()
+    }
+
+    @objc func artObjectsLabelTapped() {
+        delegate?.didTapArtObjectsLabel()
+    }
+
+    @objc func graphicsLabelTapped() {
+        delegate?.didTapGraphicsLabel()
     }
 }
 

@@ -17,7 +17,6 @@ class CartViewController: UIViewController, ControllerProtocol {
         self.viewModel = viewModel
         self.cartView = CartView(frame: .zero)
         self.cartDataSourse = CartDataSourse()
-        viewModel.getArtsFromCart()
         super.init(nibName: nil, bundle: nil)
     }
 

@@ -21,6 +21,23 @@ class ArtsStoreCoordinator: BaseCoordinator {
 
     private func showArtsStoreController() {
         let artsStoreController = controllerFactory.createArtsStoreController()
+
+        artsStoreController.flowCompletionHandlerWithValue = { [weak self] type in
+            guard let self = self else { return }
+            showArtCategoryFlow(type)
+            self.flowCompletionHandler?()
+        }
+        
         router.setRootController(artsStoreController)
+    }
+
+    private func showArtCategoryFlow(_ type: ArtType) {
+        let artCategoryCoordinator = coordinatorFactory.createArtCategoryCoordinator(router: router, type: type)
+        addDependency(artCategoryCoordinator)
+        artCategoryCoordinator.flowCompletionHandler = { [weak self, artCategoryCoordinator] in
+            self?.removeDependency(artCategoryCoordinator)
+        }
+
+        artCategoryCoordinator.start()
     }
 }

@@ -77,4 +77,32 @@ final class ControllerFactory: ControllerFactoryProtocol {
 
         return controller
     }
+
+    func createUserPurchasesController() -> UserPurchasesController {
+        let viewModel = UserPurchasesViewModel()
+        let controller = UserPurchasesController(viewModel: viewModel)
+
+        return controller
+    }
+
+    func createFavoritesController() -> FavoritesViewController {
+        let viewModel = FavoritesViewModel()
+        let controller = FavoritesViewController(viewModel: viewModel)
+
+        return controller
+    }
+
+    func createArtCategoryController(type: ArtType) -> ArtCategoryViewController {
+        let viewModel = ArtCategoryViewModel()
+        let controller = ArtCategoryViewController(viewModel: viewModel, type: type)
+
+        return controller
+    }
+
+    func createDetailArtController(art: Art) -> DetailArtViewController {
+        let viewModel = DetailArtViewModel()
+        let controller = DetailArtViewController(viewModel: viewModel, art: art)
+
+        return controller
+    }
 }

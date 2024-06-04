@@ -16,6 +16,7 @@ class BaseViewCell: UITableViewCell {
     lazy var typeLabel = uiFactory.createLabel(type: .default)
     var likeButton: UIButton?
     var cartButton: UIButton?
+    var labelsSV = UIStackView()
 
     // MARK: - Constants
     let uiFactory = UIFactoryMethod()
@@ -53,6 +54,12 @@ class BaseViewCell: UITableViewCell {
     }
 }
 
+extension BaseViewCell {
+    func getIndexPath() -> IndexPath {
+        return (table?.indexPath(for: self) ?? IndexPath(row: 0, section: 0))
+    }
+}
+
 // MARK: - Configure actions
 private extension BaseViewCell {
     func configureLikeButton() {
@@ -78,16 +85,12 @@ private extension BaseViewCell {
 
         cartButton = uiFactory.createButton(type: .cart, action: action, isInCart: isInCart.value?.isInCart ?? false)
     }
-
-    func getIndexPath() -> IndexPath {
-        return (table?.indexPath(for: self) ?? IndexPath(row: 0, section: 0))
-    }
 }
 
 // MARK: - Configure UI
 private extension BaseViewCell {
     func configureUI() {
-        let labelsSV = UIStackView(arrangedSubviews: [infoLabel, nameLabel, typeLabel])
+        labelsSV = UIStackView(arrangedSubviews: [infoLabel, nameLabel, typeLabel])
         labelsSV.axis = .vertical
         labelsSV.alignment = .leading
         labelsSV.spacing = 4

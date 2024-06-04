@@ -319,7 +319,9 @@ private extension NetworkService {
                         year: year,
                         isLike: false,
                         isInCart: false,
-                        cost: artDto.cost
+                        cost: artDto.cost,
+                        isSelling: false,
+                        isSelled: false
                     )
                     result.append(art)
                 }

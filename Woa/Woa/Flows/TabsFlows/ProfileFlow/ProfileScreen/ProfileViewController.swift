@@ -46,11 +46,19 @@ class ProfileViewController: UIViewController, ControllerWithValueProtocol {
 // MARK: - Custom Delegate SignUpView
 extension ProfileViewController: ProfileViewDelegate {
     func didTapArtsLabel() {
-        viewModel.createArt()
+        flowCompletionHandlerWithValue?(.userArts)
     }
     
     func didTapChangeProfileLabel() {
         flowCompletionHandlerWithValue?(.changeProfile)
+    }
+
+    func didTapPurchasesLabel() {
+        flowCompletionHandlerWithValue?(.purchases)
+    }
+
+    func didTapFavoritesLabel() {
+        flowCompletionHandlerWithValue?(.favorites)
     }
 }
 

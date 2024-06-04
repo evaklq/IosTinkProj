@@ -15,4 +15,6 @@ protocol CoordinatorFactoryProtocol {
     func createArtsStoreCoordinator(router: Router) -> ArtsStoreCoordinator
     func createCartCoordinator(router: Router) -> CartCoordinator
     func createProfileCoordinator(router: Router) -> ProfileCoordinator
+    func createUserArtsCoordinator(router: Router) -> UserArtsCoordinator
+    func createArtCategoryCoordinator(router: Router, type: ArtType) -> ArtCategoryCoordinator
 }

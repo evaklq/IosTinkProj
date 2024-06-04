@@ -50,7 +50,7 @@ private extension ChangeProfileViewController {
         viewModel.currentUser.bind { [weak self] (user) in
             guard let self, let user else { return }
 
-            changeProfileView.configureUser(name: user.nick, email: user.email)
+            changeProfileView.configureUser(nick: user.nick, email: user.email)
         }
 
         viewModel.image.bind { [weak self] (image) in

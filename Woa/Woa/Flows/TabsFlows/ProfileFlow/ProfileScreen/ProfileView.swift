@@ -10,19 +10,21 @@ import UIKit
 protocol ProfileViewDelegate: AnyObject {
     func didTapArtsLabel()
     func didTapChangeProfileLabel()
+    func didTapPurchasesLabel()
+    func didTapFavoritesLabel()
 }
 
 class ProfileView: BaseView {
     // MARK: - UI elements
     private lazy var backImage = UIImageView()
     private lazy var userImage = UIImageView()
-    private lazy var userNameLabel = uiFactory.createLabel(type: .title, text: Strings.Title.welcomeUser, size: 30)
-    private lazy var userEmailLabel = uiFactory.createLabel(type: .default, text: Strings.Title.welcomeUser)
+    private lazy var userNameLabel = uiFactory.createLabel(type: .title, size: 30)
+    private lazy var userEmailLabel = uiFactory.createLabel(type: .default)
 
     private lazy var userArtsLabel = uiFactory.createLabel(type: .default, text: "Your arts", size: 20)
-    private lazy var userPurchasesLabel = uiFactory.createLabel(type: .default, text: Strings.Title.popularArts, size: 20)
+    private lazy var userPurchasesLabel = uiFactory.createLabel(type: .default, text: "Your purchases", size: 20)
     private lazy var changeProfileLabel = uiFactory.createLabel(type: .default, text: "Change profile", size: 20)
-    private lazy var userFavoritesLabel = uiFactory.createLabel(type: .default, text: Strings.Title.popularArts, size: 20)
+    private lazy var userFavoritesLabel = uiFactory.createLabel(type: .default, text: "Favorites", size: 20)
 
     private lazy var artsImage = UIImageView()
     private lazy var purchasesImage = UIImageView()
@@ -37,14 +39,21 @@ class ProfileView: BaseView {
         super.init(frame: frame)
         userArtsLabel.isUserInteractionEnabled = true
         changeProfileLabel.isUserInteractionEnabled = true
+        userPurchasesLabel.isUserInteractionEnabled = true
+        userFavoritesLabel.isUserInteractionEnabled = true
         configureUI()
 
         let artsGesture = UITapGestureRecognizer(target: self, action: #selector(artsLabelTapped))
         userArtsLabel.addGestureRecognizer(artsGesture)
 
-
         let changeProfileGesture = UITapGestureRecognizer(target: self, action: #selector(changeProfileTapped))
         changeProfileLabel.addGestureRecognizer(changeProfileGesture)
+
+        let userPurchasesGesture = UITapGestureRecognizer(target: self, action: #selector(purchasesTapped))
+        userPurchasesLabel.addGestureRecognizer(userPurchasesGesture)
+
+        let favoritesGesture = UITapGestureRecognizer(target: self, action: #selector(favoritesTapped))
+        userFavoritesLabel.addGestureRecognizer(favoritesGesture)
 
     }
     required init?(coder: NSCoder) {
@@ -68,6 +77,14 @@ extension ProfileView {
 
     @objc func changeProfileTapped() {
         delegate?.didTapChangeProfileLabel()
+    }
+
+    @objc func purchasesTapped() {
+        delegate?.didTapPurchasesLabel()
+    }
+
+    @objc func favoritesTapped() {
+        delegate?.didTapFavoritesLabel()
     }
 }
 
@@ -99,11 +116,11 @@ private extension ProfileView {
         userInfoSV.spacing = 5
 
         let artsSV = UIStackView(arrangedSubviews: [userArtsLabel, artsImage])
-        // let purchasesSV = UIStackView(arrangedSubviews: [userPurchasesLabel, purchasesImage])
-        // let favoritesSV = UIStackView(arrangedSubviews: [userFavoritesLabel, favoritesImage])
+        let purchasesSV = UIStackView(arrangedSubviews: [userPurchasesLabel, purchasesImage])
+        let favoritesSV = UIStackView(arrangedSubviews: [userFavoritesLabel, favoritesImage])
         let changeProfileSV = UIStackView(arrangedSubviews: [changeProfileLabel, changeProfileImage])
 
-        let stackViews = [artsSV, changeProfileSV]
+        let stackViews = [artsSV, purchasesSV, favoritesSV, changeProfileSV]
 
         for stackView in stackViews {
             stackView.alignment = .fill

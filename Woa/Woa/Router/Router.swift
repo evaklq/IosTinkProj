@@ -20,6 +20,7 @@ final class Router: RouterProtocol {
 
     func push(_ controller: UIViewController, animated: Bool) {
         configureNavBar()
+        controller.hidesBottomBarWhenPushed = true
         rootController?.pushViewController(controller, animated: animated)
     }
 
